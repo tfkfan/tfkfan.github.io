@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "portfolio",
+    "clientFramework": "react",
+    "clientTestFrameworks": [],
+    "clientTheme": "none",
+    "creationTimestamp": 1740673076233,
+    "enableTranslation": true,
+    "entities": [],
+    "jhipsterVersion": "8.9.0",
+    "languages": ["en", "ru"],
+    "microfrontend": null,
+    "microfrontends": [],
+    "monorepository": true,
+    "nativeLanguage": "en",
+    "skipCommitHook": true,
+    "skipServer": true,
+    "testFrameworks": [],
+    "withAdminUi": false
+  }
+}

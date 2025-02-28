@@ -1,0 +1,29 @@
+{
+  "about": {
+    "title": "Welcome, this is my personal webpage.",
+    "subtitle": "Here you can find more info about me and my work",
+    "accomplishments": {
+      "title": "Accomplishments:",
+      "author": "Author of professional software development articles",
+      "community": "Member and expert of \"Videogame industry development organization\" (RU)",
+      "game": "Own browser 2d multiplayer and game server engine",
+      "framework": "Creator of own framework for game server and multiplayers development ( in active development )",
+      "projects": "Big projects implementation from scratch and leading to production, java backend technical management, expertise and team leading. Gratitude from CTOs and CEOs"
+    },
+    "orbital": {
+      "main": "This is high-performance vert.x based distributed java game server designed for realtime 2D/3D multiplayer games requiring low-latency realtime computations",
+      "subtext": "Project is in active development. Looking for contributors and sponsors to make this stuff widely used in future. Support this project by stars on github If you like idea.",
+      "features": {
+        "title": "Features",
+        "room": "Room-based game logic and components",
+        "vertx": "Non blocking vert.x distributed application",
+        "support": "HTTP + websocket. Tcp/udp server mode in development",
+        "management": "Advanced room and user management (in development)",
+        "geometry": "Grid systems and geometry collision components (in development)",
+        "routes": "Annotation-based declarative websocket/tcp/udp event handlers",
+        "objects": "Advanced game objects and computations (in development)"
+      }
+    },
+    "main": "I am software developer since 2015 with extensive experience in commercial/fintech/highload/distributed applications development including games. Modern backend,highload,realtime technologies and tools expert. Tech lead, team lead, mentor."
+  }
+}
