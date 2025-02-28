@@ -35,6 +35,25 @@
         "objects": "Advanced game objects and computations (in development)"
       }
     },
+    "portfolio": {
+      "title": "Frontend development portfolio",
+      "game": {
+        "title": "Multiplayer game",
+        "description": "Java/Vertx/Typescript/React/Phaser highload game room and battle-royale based multiplayer"
+      },
+      "esia": {
+        "title": "Esia captcha",
+        "description": "Highload captcha generator and firewall for esia/gosuslugi"
+      },
+      "bank-admin": {
+        "title": "Banking admin dashboard",
+        "description": "Typescript, react"
+      },
+      "bank-payments": {
+        "title": "Instant payments user application",
+        "description": "Typescript, react"
+      }
+    },
     "main": "I am software developer since 2015 with extensive experience in commercial/fintech/highload/distributed applications development including games. Modern backend,highload,realtime technologies and tools expert. Tech lead, team lead, mentor."
   }
 }

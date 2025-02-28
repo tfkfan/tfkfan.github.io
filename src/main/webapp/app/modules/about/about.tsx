@@ -2,7 +2,7 @@ import './about.scss';
 
 import React from 'react';
 import {Translate} from 'react-jhipster';
-import {Col, Row} from 'reactstrap';
+import {Button, Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
 
 export const About = () => {
 
@@ -21,7 +21,7 @@ export const About = () => {
           <Translate contentKey="about.main"></Translate>
         </p>
         <div className="line"></div>
-        <p>
+        <p className="subtitle">
           <Translate contentKey="about.accomplishments.title"></Translate>
         </p>
         <p>
@@ -36,7 +36,7 @@ export const About = () => {
           </ul>
         </p>
         <div className="line"></div>
-        <p>
+        <p className="subtitle">
           <Translate contentKey="about.publications.title"></Translate>
         </p>
         <p>
@@ -62,12 +62,12 @@ export const About = () => {
           JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, HELM, Ansible
         </p>
         <div className="line"></div>
-        <p>
+        <p className="subtitle">
           <Translate contentKey="about.orbital.title"></Translate>
         </p>
         <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300}
                                                          height={100}/></a>
-        <p style={{marginTop: "20px", fontWeight: "500"}}>
+        <p className="subtitle">
           <Translate contentKey="about.orbital.main"></Translate>
         </p>
         <p>
@@ -84,6 +84,66 @@ export const About = () => {
           <li><Translate contentKey="about.orbital.features.routes"></Translate></li>
           <li><Translate contentKey="about.orbital.features.objects"></Translate></li>
         </ul>
+
+        <div className="line"></div>
+        <p className="subtitle">
+          <Translate contentKey="about.portfolio.title"></Translate>
+        </p>
+
+        <Row>
+          <Col md={6}>
+            <Card className="portfolio-card">
+              <img alt="game" src="content/images/game_1.png"/>
+              <img alt="game" src="content/images/game_2.png"/>
+              <img alt="game" src="content/images/game_3.png"/>
+              <CardBody>
+                <CardTitle tag="h5"> <Translate contentKey="about.portfolio.game.title"></Translate></CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  <Translate contentKey="about.portfolio.game.description"></Translate>
+                </CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col md={6}>
+            <Card className="portfolio-card">
+              <img alt="esia" src="content/images/esia.png"/>
+              <CardBody>
+                <CardTitle tag="h5"> <Translate contentKey="about.portfolio.esia.title"></Translate></CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  <Translate contentKey="about.portfolio.esia.description"></Translate>
+                </CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        <Row style={{marginTop: "20px", marginBottom: "20px"}}>
+          <Col md={6}>
+            <Card className="portfolio-card">
+              <img alt="bank1" src="content/images/bank_1.png"/>
+              <img alt="bank1" src="content/images/bank_2.png"/>
+              <CardBody>
+                <CardTitle tag="h5">
+                  <Translate contentKey="about.portfolio.bank-admin.title"></Translate></CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  <Translate contentKey="about.portfolio.bank-admin.description"></Translate>
+                </CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col md={6}>
+            <Card className="portfolio-card">
+              <img alt="bank1" src="content/images/bank_3.png"/>
+              <img alt="bank1" src="content/images/bank_4.png"/>
+              <CardBody>
+                <CardTitle tag="h5">
+                  <Translate contentKey="about.portfolio.bank-payments.title"></Translate></CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  <Translate contentKey="about.portfolio.bank-payments.description"></Translate>
+                </CardSubtitle>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
       </Col>
     </Row>
   );
