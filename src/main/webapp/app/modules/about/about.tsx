@@ -20,8 +20,11 @@ export const About = () => {
         <p>
           <Translate contentKey="about.main"></Translate>
         </p>
+        <div className="line"></div>
         <p>
           <Translate contentKey="about.accomplishments.title"></Translate>
+        </p>
+        <p>
           <ul>
             <li><Translate contentKey="about.accomplishments.author"></Translate></li>
             <li><Translate contentKey="about.accomplishments.community"></Translate>&nbsp;<a
@@ -33,7 +36,37 @@ export const About = () => {
           </ul>
         </p>
         <div className="line"></div>
-        <a href="https://github.com/tfkfan/orbital"><img src="/content/images/orbital-full.svg" width={300} height={100}/></a>
+        <p>
+          <Translate contentKey="about.publications.title"></Translate>
+        </p>
+        <p>
+          <ul>
+            <li><a href="https://habr.com/ru/articles/774322/">
+              <Translate contentKey="about.publications.one"></Translate></a></li>
+            <li><a href="https://habr.com/ru/articles/800689/">
+              <Translate contentKey="about.publications.two"></Translate></a></li>
+            <li><a href="https://habr.com/ru/articles/771630/">
+              <Translate contentKey="about.publications.three"></Translate></a></li>
+            <li><a href="https://habr.com/ru/articles/803969/">
+              <Translate contentKey="about.publications.four"></Translate></a></li>
+          </ul>
+        </p>
+        <div className="line"></div>
+        <p>
+          <Translate contentKey="about.skills.title"></Translate>
+        </p>
+        <p>
+          Java 22, Kotlin 1.9, C/C++, JavaScript, TypeScript, VertX, Spring, Micronaut, Quarkus, HTML, CSS, Phaser 3,
+          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Redis,
+          Kafka, RabbitMQ, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
+          JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, HELM, Ansible
+        </p>
+        <div className="line"></div>
+        <p>
+          <Translate contentKey="about.orbital.title"></Translate>
+        </p>
+        <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300}
+                                                         height={100}/></a>
         <p style={{marginTop: "20px", fontWeight: "500"}}>
           <Translate contentKey="about.orbital.main"></Translate>
         </p>

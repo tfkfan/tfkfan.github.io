@@ -10,7 +10,18 @@
       "framework": "Creator of own framework for game server and multiplayers development ( in active development )",
       "projects": "Big projects implementation from scratch and leading to production, java backend technical management, expertise and team leading. Gratitude from CTOs and CEOs"
     },
+    "publications": {
+      "title": "Publications:",
+      "one": "Highload websocket game server development with Netty,Java and BattleRoyale/Matchmaking support",
+      "two": "Highload websocket game server development with Webflux,Kotlin and BattleRoyale/Matchmaking support",
+      "three": "Browser game development with React, Typescript and Phaser 3",
+      "four": "Secured dev bitnami/kafka cluster setup with helm"
+    },
+    "skills": {
+      "title": "Skills:"
+    },
     "orbital": {
+      "title": "Framework",
       "main": "This is high-performance vert.x based distributed java game server designed for realtime 2D/3D multiplayer games requiring low-latency realtime computations",
       "subtext": "Project is in active development. Looking for contributors and sponsors to make this stuff widely used in future. Support this project by stars on github If you like idea.",
       "features": {
