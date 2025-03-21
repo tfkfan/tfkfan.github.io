@@ -56,7 +56,8 @@ export const About = () => {
           <Translate contentKey="about.skills.title"></Translate>
         </p>
         <p>
-          Java 22, Kotlin 1.9, C/C++, JavaScript, TypeScript, VertX, Spring, Micronaut, Quarkus, HTML, CSS, Phaser 3,
+          Java 22, Kotlin 1.9, C/C++, JavaScript, TypeScript, VertX, Spring, Micronaut, Quarkus, GraalVM, HTML, CSS,
+          Phaser 3,
           React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Redis,
           Kafka, RabbitMQ, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
           JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, HELM, Ansible
@@ -79,10 +80,12 @@ export const About = () => {
           <li><Translate contentKey="about.orbital.features.room"></Translate></li>
           <li><Translate contentKey="about.orbital.features.vertx"></Translate></li>
           <li><Translate contentKey="about.orbital.features.support"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.management"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.management"></Translate>
+            &nbsp;<a href="https://github.com/tfkfan/orbital-monitor">link</a></li>
           <li><Translate contentKey="about.orbital.features.geometry"></Translate></li>
           <li><Translate contentKey="about.orbital.features.routes"></Translate></li>
           <li><Translate contentKey="about.orbital.features.objects"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.graalvm"></Translate></li>
         </ul>
 
         <div className="line"></div>
@@ -91,7 +94,7 @@ export const About = () => {
         </p>
 
         <Row>
-          <Col md={6}>
+       {/*   <Col md={6}> */}
             <Card className="portfolio-card">
               <img alt="game" src="content/images/game_1.png"/>
               <img alt="game" src="content/images/game_2.png"/>
@@ -103,7 +106,7 @@ export const About = () => {
                 </CardSubtitle>
               </CardBody>
             </Card>
-          </Col>
+       {/*   </Col>
           <Col md={6}>
             <Card className="portfolio-card">
               <img alt="esia" src="content/images/esia.png"/>
@@ -114,9 +117,9 @@ export const About = () => {
                 </CardSubtitle>
               </CardBody>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
-        <Row style={{marginTop: "20px", marginBottom: "20px"}}>
+        {/* <Row style={{marginTop: "20px", marginBottom: "20px"}}>
           <Col md={6}>
             <Card className="portfolio-card">
               <img alt="bank1" src="content/images/bank_1.png"/>
@@ -143,7 +146,7 @@ export const About = () => {
               </CardBody>
             </Card>
           </Col>
-        </Row>
+        </Row> */}
       </Col>
     </Row>
   );

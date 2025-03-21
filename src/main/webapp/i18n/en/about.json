@@ -27,12 +27,13 @@
       "features": {
         "title": "Features",
         "room": "Room-based game logic and components",
-        "vertx": "Non blocking vert.x distributed application",
+        "vertx": "Non blocking vert.x distributed application. Infinispan cluster in development",
         "support": "HTTP + websocket. Tcp/udp server mode in development",
-        "management": "Advanced room and user management (in development)",
+        "management": "Web app with monitoring and advanced room/user management (in development)",
         "geometry": "Grid systems and geometry collision components (in development)",
         "routes": "Annotation-based declarative websocket/tcp/udp event handlers",
-        "objects": "Advanced game objects and computations (in development)"
+        "objects": "Advanced game objects and computations (in development)",
+        "graalvm": "GraalVM native image optimizations (in development)"
       }
     },
     "portfolio": {

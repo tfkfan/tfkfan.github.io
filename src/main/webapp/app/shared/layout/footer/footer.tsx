@@ -15,7 +15,7 @@ const Footer = () => (
 
         <ul className="contacts-list">
           <li className="p-name"><Translate contentKey="global.title">Artem Baltser</Translate></li>
-          <li><a href="mailto:abaltser13111@gmail.com">abaltser13111@gmail.com</a></li>
+          <li><a href="mailto:abaltserdev@outlook.com">abaltserdev@outlook.com</a></li>
         </ul>
         </div>
       </Col>
@@ -29,11 +29,6 @@ const Footer = () => (
           <li>
             <a href="https://www.linkedin.com/in/tfkfan" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin}/><span>tfkfan</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://t.me/tfkfan" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTelegram}/><span>tfkfan</span>
             </a>
           </li>
         </ul>
