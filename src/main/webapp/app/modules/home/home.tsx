@@ -1,10 +1,10 @@
-import './about.scss';
+import './home.scss';
 
 import React from 'react';
 import {Translate} from 'react-jhipster';
 import {Button, Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
 
-export const About = () => {
+export const Home = () => {
 
   return (
     <Row>
@@ -80,8 +80,9 @@ export const About = () => {
           <li><Translate contentKey="about.orbital.features.room"></Translate></li>
           <li><Translate contentKey="about.orbital.features.vertx"></Translate></li>
           <li><Translate contentKey="about.orbital.features.support"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.management"></Translate>
+          <li><Translate contentKey="about.orbital.features.monitoring"></Translate>
             &nbsp;<a href="https://github.com/tfkfan/orbital-monitor">link</a></li>
+          <li><Translate contentKey="about.orbital.features.admin"></Translate></li>
           <li><Translate contentKey="about.orbital.features.geometry"></Translate></li>
           <li><Translate contentKey="about.orbital.features.routes"></Translate></li>
           <li><Translate contentKey="about.orbital.features.objects"></Translate></li>
@@ -90,7 +91,7 @@ export const About = () => {
 
         <div className="line"></div>
         <p className="subtitle">
-          <Translate contentKey="about.portfolio.title"></Translate>
+        <Translate contentKey="about.portfolio.title"></Translate>
         </p>
 
         <Row>
@@ -152,4 +153,4 @@ export const About = () => {
   );
 };
 
-export default About;
+export default Home;

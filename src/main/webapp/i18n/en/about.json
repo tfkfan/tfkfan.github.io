@@ -7,7 +7,7 @@
       "author": "Author of professional software development articles",
       "community": "Member and expert of \"Videogame industry development organization\" (RU)",
       "game": "Own browser 2d multiplayer and game server engine",
-      "framework": "Creator of own framework for game server and multiplayers development ( in active development )",
+      "framework": "Creator of own framework for indie game server and multiplayers development",
       "projects": "Big projects implementation from scratch and leading to production, java backend technical management, expertise and team leading. Gratitude from CTOs and CEOs"
     },
     "publications": {
@@ -26,14 +26,18 @@
       "subtext": "Project is in active development. Looking for contributors and sponsors to make this stuff widely used in future. Support this project by stars on github If you like idea.",
       "features": {
         "title": "Features",
-        "room": "Room-based game logic and components",
-        "vertx": "Non blocking vert.x distributed application. Infinispan cluster in development",
+        "room": "Room-based game logic and components. Basic extensible Matchmaker",
+        "vertx": "Non blocking vert.x distributed application. Infinispan cluster support in development",
         "support": "HTTP + websocket. Tcp/udp server mode in development",
-        "management": "Web app with monitoring and advanced room/user management (in development)",
+        "monitoring": "Prometheus + micrometer + web app with monitoring",
+        "admin": "Advanced room/user management (in development)",
         "geometry": "Grid systems and geometry collision components (in development)",
         "routes": "Annotation-based declarative websocket/tcp/udp event handlers",
         "objects": "Advanced game objects and computations (in development)",
-        "graalvm": "GraalVM native image optimizations (in development)"
+        "graalvm": "GraalVM native image optimizations (in development)",
+        "auth": "Auth-protected REST API and social accounts oidc providers (in development)",
+        "payments": "Payments api integrations (in development)",
+        "meta": "Meta game logic tools (in development)"
       }
     },
     "portfolio": {
