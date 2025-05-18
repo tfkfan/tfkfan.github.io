@@ -27,18 +27,20 @@
       "features": {
         "title": "Features",
         "room": "Room-based game logic and components. Basic extensible Matchmaker",
-        "vertx": "Non blocking vert.x distributed application. Infinispan cluster support in development",
+        "vertx": "Non blocking vert.x distributed application",
         "support": "HTTP + websocket. Tcp/udp server mode in development",
         "monitoring": "Prometheus + micrometer + web app with monitoring",
+        "geometry": "Lucene/JTS geo spatial indices and collision detection",
         "admin": "Advanced room/user management (in development)",
-        "geometry": "Grid systems and geometry collision components (in development)",
         "routes": "Annotation-based declarative websocket/tcp/udp event handlers",
         "objects": "Advanced game objects and computations (in development)",
         "graalvm": "GraalVM native image optimizations (in development)",
-        "auth": "Auth-protected REST API and social accounts oidc providers (in development)",
+        "oidc": "Auth-protected REST API and social accounts oidc providers (in development)",
         "payments": "Payments api integrations (in development)",
-        "meta": "Meta game logic tools (in development)"
-      }
+        "meta": "Meta game logic tools (in development)",
+        "cluster": "Clustered mode Hazelcast/Infinispan (in development)"
+      },
+      "version": "Latest version 1.2.0"
     },
     "portfolio": {
       "title": "Frontend development portfolio",

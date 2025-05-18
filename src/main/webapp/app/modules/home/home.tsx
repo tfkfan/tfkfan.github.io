@@ -2,7 +2,7 @@ import './home.scss';
 
 import React from 'react';
 import {Translate} from 'react-jhipster';
-import {Button, Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
+import {Badge, Button, Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
 
 export const Home = () => {
 
@@ -68,6 +68,7 @@ export const Home = () => {
         </p>
         <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300}
                                                          height={100}/></a>
+        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate></Badge></p>
         <p className="subtitle">
           <Translate contentKey="about.orbital.main"></Translate>
         </p>
@@ -80,12 +81,15 @@ export const Home = () => {
           <li><Translate contentKey="about.orbital.features.room"></Translate></li>
           <li><Translate contentKey="about.orbital.features.vertx"></Translate></li>
           <li><Translate contentKey="about.orbital.features.support"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.geometry"></Translate></li>
           <li><Translate contentKey="about.orbital.features.monitoring"></Translate>
             &nbsp;<a href="https://github.com/tfkfan/orbital-monitor">link</a></li>
-          <li><Translate contentKey="about.orbital.features.admin"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.geometry"></Translate></li>
           <li><Translate contentKey="about.orbital.features.routes"></Translate></li>
           <li><Translate contentKey="about.orbital.features.objects"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.cluster"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.oidc"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.payments"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.admin"></Translate></li>
           <li><Translate contentKey="about.orbital.features.graalvm"></Translate></li>
         </ul>
 
@@ -95,59 +99,19 @@ export const Home = () => {
         </p>
 
         <Row>
-       {/*   <Col md={6}> */}
-            <Card className="portfolio-card">
-              <img alt="game" src="content/images/game_1.png"/>
-              <img alt="game" src="content/images/game_2.png"/>
-              <img alt="game" src="content/images/game_3.png"/>
-              <CardBody>
-                <CardTitle tag="h5"> <Translate contentKey="about.portfolio.game.title"></Translate></CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  <Translate contentKey="about.portfolio.game.description"></Translate>
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-       {/*   </Col>
-          <Col md={6}>
-            <Card className="portfolio-card">
-              <img alt="esia" src="content/images/esia.png"/>
-              <CardBody>
-                <CardTitle tag="h5"> <Translate contentKey="about.portfolio.esia.title"></Translate></CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  <Translate contentKey="about.portfolio.esia.description"></Translate>
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col> */}
+          {/*   <Col md={6}> */}
+          <Card className="portfolio-card">
+            <img alt="game" src="content/images/game_1.png"/>
+            <img alt="game" src="content/images/game_2.png"/>
+            <img alt="game" src="content/images/game_3.png"/>
+            <CardBody>
+              <CardTitle tag="h5"> <Translate contentKey="about.portfolio.game.title"></Translate></CardTitle>
+              <CardSubtitle className="mb-2 text-muted" tag="h6">
+                <Translate contentKey="about.portfolio.game.description"></Translate>
+              </CardSubtitle>
+            </CardBody>
+          </Card>
         </Row>
-        {/* <Row style={{marginTop: "20px", marginBottom: "20px"}}>
-          <Col md={6}>
-            <Card className="portfolio-card">
-              <img alt="bank1" src="content/images/bank_1.png"/>
-              <img alt="bank1" src="content/images/bank_2.png"/>
-              <CardBody>
-                <CardTitle tag="h5">
-                  <Translate contentKey="about.portfolio.bank-admin.title"></Translate></CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  <Translate contentKey="about.portfolio.bank-admin.description"></Translate>
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col md={6}>
-            <Card className="portfolio-card">
-              <img alt="bank1" src="content/images/bank_3.png"/>
-              <img alt="bank1" src="content/images/bank_4.png"/>
-              <CardBody>
-                <CardTitle tag="h5">
-                  <Translate contentKey="about.portfolio.bank-payments.title"></Translate></CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  <Translate contentKey="about.portfolio.bank-payments.description"></Translate>
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row> */}
       </Col>
     </Row>
   );
