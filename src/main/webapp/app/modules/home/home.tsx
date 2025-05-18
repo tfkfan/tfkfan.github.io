@@ -58,7 +58,7 @@ export const Home = () => {
         <p>
           Java 22, Kotlin 1.9, C/C++, JavaScript, TypeScript, VertX, Spring, Micronaut, Quarkus, GraalVM, HTML, CSS,
           Phaser 3,
-          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Redis,
+          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Redis, ElasticSearch, Lucene,
           Kafka, RabbitMQ, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
           JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, HELM, Ansible
         </p>
