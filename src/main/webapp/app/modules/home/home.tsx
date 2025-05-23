@@ -56,11 +56,12 @@ export const Home = () => {
           <Translate contentKey="about.skills.title"></Translate>
         </p>
         <p>
-          Java 22, Kotlin 1.9, C/C++, JavaScript, TypeScript, VertX, Spring, Micronaut, Quarkus, GraalVM, HTML, CSS,
+          Java, Kotlin, C/C++, JavaScript, TypeScript, VertX, Spring, Micronaut, Quarkus, GraalVM, HTML, CSS,
           Phaser 3,
           React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Redis, ElasticSearch, Lucene,
           Kafka, RabbitMQ, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
-          JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, HELM, Ansible
+          JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, HELM, Ansible,
+          SA, ArchiMate, Service Mesh, Camunda, Istio
         </p>
         <div className="line"></div>
         <p className="subtitle">
@@ -68,7 +69,7 @@ export const Home = () => {
         </p>
         <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300}
                                                          height={100}/></a>
-        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate></Badge></p>
+        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate>&nbsp; 1.2.1</Badge></p>
         <p className="subtitle">
           <Translate contentKey="about.orbital.main"></Translate>
         </p>

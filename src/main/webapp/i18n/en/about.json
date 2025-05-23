@@ -40,7 +40,7 @@
         "meta": "Meta game logic tools (in development)",
         "cluster": "Clustered mode Hazelcast/Infinispan (in development)"
       },
-      "version": "Latest version 1.2.0"
+      "version": "Latest version"
     },
     "portfolio": {
       "title": "Frontend development portfolio",
