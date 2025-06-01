@@ -31,27 +31,13 @@ export const Home = () => {
               href="https://forgamedev.ru/">forgamedev.ru</a></li>
             <li><Translate contentKey="about.accomplishments.projects"></Translate></li>
             <li><Translate contentKey="about.accomplishments.game"></Translate></li>
+            <li><Translate contentKey="about.accomplishments.hack"></Translate></li>
             <li><Translate contentKey="about.accomplishments.framework"></Translate>&nbsp;<a
               href="https://github.com/tfkfan/orbital">Orbital</a></li>
           </ul>
         </p>
         <div className="line"></div>
-        <p className="subtitle">
-          <Translate contentKey="about.publications.title"></Translate>
-        </p>
-        <p>
-          <ul>
-            <li><a href="https://habr.com/ru/articles/774322/">
-              <Translate contentKey="about.publications.one"></Translate></a></li>
-            <li><a href="https://habr.com/ru/articles/800689/">
-              <Translate contentKey="about.publications.two"></Translate></a></li>
-            <li><a href="https://habr.com/ru/articles/771630/">
-              <Translate contentKey="about.publications.three"></Translate></a></li>
-            <li><a href="https://habr.com/ru/articles/803969/">
-              <Translate contentKey="about.publications.four"></Translate></a></li>
-          </ul>
-        </p>
-        <div className="line"></div>
+
         <p>
           <Translate contentKey="about.skills.title"></Translate>
         </p>

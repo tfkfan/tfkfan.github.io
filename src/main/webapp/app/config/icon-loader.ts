@@ -1,4 +1,5 @@
 import {
+  faAward,
   faArrowLeft,
   faAsterisk,
   faBan,
@@ -32,13 +33,16 @@ import {
   faUsers,
   faUsersCog,
   faWrench,
-  faContactBook
+  faContactBook,
+  faFilePen
 } from '@fortawesome/free-solid-svg-icons';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 
 export const loadIcons = () => {
   library.add(
+    faFilePen,
+    faAward,
     faArrowLeft,
     faAsterisk,
     faBan,

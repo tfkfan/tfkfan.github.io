@@ -1,0 +1,9 @@
+{
+  "publications": {
+    "title": "Публикации",
+    "one": "Разработка высоконагруженного игрового WebSocket сервера на Java, Netty с поддержкой BattleRoyale/Matchmaking",
+    "two": "Разработка высоконагруженного игрового WebSocket сервера на Kotlin, Webflux с поддержкой BattleRoyale/Matchmaking",
+    "three": "Разработка браузерных игр с использованием Phaser3, React, Typescript",
+    "four": "Развертывание защищенного dev кластера bitnami/kafka в k8s с помощью helm"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "publications": {
+    "title": "Publications",
+    "one": "Highload websocket game server development with Netty,Java and BattleRoyale/Matchmaking support",
+    "two": "Highload websocket game server development with Webflux,Kotlin and BattleRoyale/Matchmaking support",
+    "three": "Browser game development with React, Typescript and Phaser 3",
+    "four": "Secured dev bitnami/kafka cluster setup with helm"
+  }
+}
