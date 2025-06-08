@@ -55,7 +55,7 @@ export const Home = () => {
         </p>
         <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300}
                                                          height={100}/></a>
-        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate>&nbsp; 1.2.1</Badge></p>
+        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate>&nbsp; 1.2.2</Badge></p>
         <p className="subtitle">
           <Translate contentKey="about.orbital.main"></Translate>
         </p>
@@ -69,11 +69,11 @@ export const Home = () => {
           <li><Translate contentKey="about.orbital.features.vertx"></Translate></li>
           <li><Translate contentKey="about.orbital.features.support"></Translate></li>
           <li><Translate contentKey="about.orbital.features.geometry"></Translate></li>
+          <li><Translate contentKey="about.orbital.features.cluster"></Translate></li>
           <li><Translate contentKey="about.orbital.features.monitoring"></Translate>
             &nbsp;<a href="https://github.com/tfkfan/orbital-monitor">link</a></li>
           <li><Translate contentKey="about.orbital.features.routes"></Translate></li>
           <li><Translate contentKey="about.orbital.features.objects"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.cluster"></Translate></li>
           <li><Translate contentKey="about.orbital.features.oidc"></Translate></li>
           <li><Translate contentKey="about.orbital.features.payments"></Translate></li>
           <li><Translate contentKey="about.orbital.features.admin"></Translate></li>

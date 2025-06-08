@@ -39,7 +39,7 @@
         "oidc": "Auth-protected REST API and social accounts oidc providers (in development)",
         "payments": "Payments api integrations (in development)",
         "meta": "Meta game logic tools (in development)",
-        "cluster": "Clustered mode Hazelcast/Infinispan (in development)"
+        "cluster": "Clustered mode Hazelcast/Infinispan"
       },
       "version": "Latest version"
     },
