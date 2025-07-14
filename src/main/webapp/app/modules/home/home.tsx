@@ -46,16 +46,15 @@ export const Home = () => {
           Phaser 3,
           React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Redis, ElasticSearch, Lucene,
           Kafka, RabbitMQ, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
-          JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, HELM, Ansible,
+          JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, Helm, Helmfile, Ansible,
           SA, ArchiMate, Service Mesh, Camunda, Istio
         </p>
         <div className="line"></div>
         <p className="subtitle">
           <Translate contentKey="about.orbital.title"></Translate>
         </p>
-        <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300}
-                                                         height={100}/></a>
-        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate>&nbsp; 1.2.2</Badge></p>
+        <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300} height={100}/></a>
+        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate></Badge></p>
         <p className="subtitle">
           <Translate contentKey="about.orbital.main"></Translate>
         </p>
@@ -88,9 +87,8 @@ export const Home = () => {
         <Row>
           {/*   <Col md={6}> */}
           <Card className="portfolio-card">
-            <img alt="game" src="content/images/game_1.png"/>
-            <img alt="game" src="content/images/game_2.png"/>
-            <img alt="game" src="content/images/game_3.png"/>
+            <img alt="game" src="content/images/game_v2_2.png"/>
+            <img alt="game" src="content/images/game_v2_3.png"/>
             <CardBody>
               <CardTitle tag="h5"> <Translate contentKey="about.portfolio.game.title"></Translate></CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
