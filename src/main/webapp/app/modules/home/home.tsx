@@ -10,11 +10,12 @@ export const Home = () => {
     <Row>
       <Col md="12">
         <h4>
-          <Translate contentKey="about.title">This is your homepage</Translate>
+          <img src="content/images/liss1.png" width={70}/> <Translate contentKey="about.title">This is your
+          homepage</Translate>
         </h4>
 
         <p className="lead">
-          <Translate contentKey="about.subtitle">This is your homepage</Translate>
+        <Translate contentKey="about.subtitle">This is your homepage</Translate>
         </p>
 
         <p>
