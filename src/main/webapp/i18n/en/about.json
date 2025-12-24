@@ -4,12 +4,13 @@
     "subtitle": "Here you can find more info about me and my work",
     "accomplishments": {
       "title": "Accomplishments:",
+      "expert": "Distributed and reactive systems, apache kafka ecosystem expert",
       "author": "Author of professional software development articles",
-      "community": "Member and expert of \"Videogame industry development organization\" (RU)",
+      "community": "\"Videogame industry development organization\" (RU) Member and expert",
       "game": "Own browser 2d multiplayer and game server engine",
       "hack": "Russian IT architecture federal hackathon 1st win",
-      "framework": "Creator of own framework for indie game server and multiplayers development",
-      "projects": "Big projects implementation from scratch and leading to production, java backend technical management, expertise and team leading. Gratitude from CTOs and CEOs"
+      "framework": "Indie multiplayers development framework owner",
+      "projects": "Federal systems implementation from scratch and leading to production, java backend technical management, expertise and team leading. Gratitude from CTOs and CEOs"
     },
     "publications": {
       "title": "Publications:",
@@ -62,6 +63,6 @@
         "description": "Typescript, react"
       }
     },
-    "main": "I am software developer since 2015 with extensive experience in commercial/fintech/highload/distributed applications development including games. Modern backend,highload,realtime technologies and tools expert. Tech lead, team lead, mentor."
+    "main": "I am software developer since 2015 with extensive experience in commercial/fintech/highload/distributed systems development including games. Tech lead/system architect, team lead, mentor."
   }
 }

@@ -27,27 +27,29 @@ export const Home = () => {
         <p>
           <ul>
             <li><Translate contentKey="about.accomplishments.author"></Translate></li>
+            <li><Translate contentKey="about.accomplishments.expert"></Translate></li>
             <li><Translate contentKey="about.accomplishments.community"></Translate>&nbsp;<a
               href="https://forgamedev.ru/">forgamedev.ru</a></li>
             <li><Translate contentKey="about.accomplishments.projects"></Translate></li>
             <li><Translate contentKey="about.accomplishments.game"></Translate></li>
             <li><Translate contentKey="about.accomplishments.hack"></Translate></li>
-            <li><Translate contentKey="about.accomplishments.framework"></Translate>&nbsp;<a
-              href="https://github.com/tfkfan/orbital">Orbital</a></li>
+            <li><a
+              href="https://github.com/tfkfan/orbital">Orbital</a> &nbsp;<Translate
+              contentKey="about.accomplishments.framework"></Translate></li>
           </ul>
         </p>
         <div className="line"></div>
 
         <p>
-          <Translate contentKey="about.skills.title"></Translate>
+        <Translate contentKey="about.skills.title"></Translate>
         </p>
-        <p>
-          Java, Kotlin, C/C++, JavaScript, TypeScript, VertX, Spring, Micronaut, Quarkus, GraalVM, HTML, CSS,
-          Phaser 3,
-          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Redis, ElasticSearch, Lucene,
-          Kafka, RabbitMQ, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
-          JHipster generator, Linux, Docker, Docker-Compose, Kubernetes, Helm, Helmfile, Ansible,
-          SA, ArchiMate, Service Mesh, Camunda, Istio
+        <p className="skills">
+          <span>Java</span>, <span>Kotlin</span>, C/C++, Golang, JavaScript, TypeScript, <span>VertX</span>, <span>Spring</span>, Micronaut, <span>Quarkus</span>,
+          RxJava, GraalVM, HTML, CSS, Phaser 3,
+          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, QueryDSL, Panache, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Debezium,
+          Redis, Infinispan, Hazelcast, ElasticSearch, Lucene, <span>Apache Kafka Ecosystem (schema registry, connectors, ksql, streams)</span>, RabbitMQ, Apache Flink, MQTT, STOMP, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
+          JHipster generator, Linux, Docker, Docker-Compose, <span>Kubernetes</span>, Helm, Helmfile, Ansible, CICD,
+          Camunda, Istio/Linkerd, ArchiMate, BPMN, C4
         </p>
         <div className="line"></div>
         <p className="subtitle">
