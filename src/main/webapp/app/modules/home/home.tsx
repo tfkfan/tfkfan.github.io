@@ -15,7 +15,7 @@ export const Home = () => {
         </h4>
 
         <p className="lead">
-        <Translate contentKey="about.subtitle">This is your homepage</Translate>
+          <Translate contentKey="about.subtitle">This is your homepage</Translate>
         </p>
 
         <p>
@@ -42,13 +42,17 @@ export const Home = () => {
         <div className="line"></div>
 
         <p>
-        <Translate contentKey="about.skills.title"></Translate>
+          <Translate contentKey="about.skills.title"></Translate>
         </p>
         <p className="skills">
-          <span>Java</span>, <span>Kotlin</span>, C/C++, Golang, JavaScript, TypeScript, <span>VertX</span>, <span>Spring</span>, Micronaut, <span>Quarkus</span>,
+          <span>Java</span>, <span>Kotlin</span>, C/C++, Golang, JavaScript,
+          TypeScript, <span>VertX</span>, <span>Spring</span>, Micronaut, <span>Quarkus</span>,
           RxJava, GraalVM, HTML, CSS, Phaser 3,
-          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, QueryDSL, Panache, PostgreSQL, MySQL, MSSQL, MongoDB, ClickHouse, Debezium,
-          Redis, Infinispan, Hazelcast, ElasticSearch, Lucene, <span>Apache Kafka Ecosystem (schema registry, connectors, ksql, streams)</span>, RabbitMQ, Apache Flink, MQTT, STOMP, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2, OpenAPI generator,
+          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, QueryDSL, Panache, PostgreSQL, MySQL, MSSQL, MongoDB,
+          ClickHouse, Debezium,
+          Redis, Infinispan, Hazelcast, ElasticSearch, Lucene, <span>Apache Kafka Ecosystem (schema registry, connectors, ksql, streams)</span>,
+          RabbitMQ, Apache Flink, MQTT, STOMP, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2,
+          OpenAPI generator,
           JHipster generator, Linux, Docker, Docker-Compose, <span>Kubernetes</span>, Helm, Helmfile, Ansible, CICD,
           Camunda, Istio/Linkerd, ArchiMate, BPMN, C4
         </p>
@@ -57,7 +61,20 @@ export const Home = () => {
           <Translate contentKey="about.orbital.title"></Translate>
         </p>
         <a href="https://tfkfan.github.io/orbital"><img src="content/images/orbital-full.svg" width={300} height={100}/></a>
-        <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate></Badge></p>
+        <p>
+          <a href="https://github.com/tfkfan/orbital">
+            <img src="https://img.shields.io/badge/github-orbital-blue?logo=github" alt="github"></img>
+          </a>
+          &nbsp;
+          <a href="https://opensource.org/licenses/MIT">
+            <img src="https://img.shields.io/badge/License-MIT-greenbright.svg" alt="MIT"></img>
+          </a>
+          &nbsp;
+          <a href="https://central.sonatype.com/artifact/io.github.tfkfan/orbital-core">
+            <img src="https://img.shields.io/maven-central/v/io.github.tfkfan/orbital-core.svg"
+                 alt="version unstable"></img>
+          </a>
+        </p>
         <p className="subtitle">
           <Translate contentKey="about.orbital.main"></Translate>
         </p>
@@ -67,7 +84,7 @@ export const Home = () => {
 
         <div className="line"></div>
         <p className="subtitle">
-        <Translate contentKey="about.portfolio.title"></Translate>
+          <Translate contentKey="about.portfolio.title"></Translate>
         </p>
 
         <Row>
