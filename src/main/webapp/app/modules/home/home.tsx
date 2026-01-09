@@ -56,7 +56,7 @@ export const Home = () => {
         <p className="subtitle">
           <Translate contentKey="about.orbital.title"></Translate>
         </p>
-        <a href="https://github.com/tfkfan/orbital"><img src="content/images/orbital-full.svg" width={300} height={100}/></a>
+        <a href="https://tfkfan.github.io/orbital"><img src="content/images/orbital-full.svg" width={300} height={100}/></a>
         <p> <Badge color="success"><Translate contentKey="about.orbital.version"></Translate></Badge></p>
         <p className="subtitle">
           <Translate contentKey="about.orbital.main"></Translate>
@@ -64,23 +64,6 @@ export const Home = () => {
         <p>
           <Translate contentKey="about.orbital.subtext"></Translate>
         </p>
-
-        <h5><Translate contentKey="about.orbital.features.title"></Translate></h5>
-        <ul>
-          <li><Translate contentKey="about.orbital.features.room"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.vertx"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.support"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.geometry"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.cluster"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.monitoring"></Translate>
-            &nbsp;<a href="https://github.com/tfkfan/orbital-monitor">link</a></li>
-          <li><Translate contentKey="about.orbital.features.routes"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.objects"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.oidc"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.payments"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.admin"></Translate></li>
-          <li><Translate contentKey="about.orbital.features.graalvm"></Translate></li>
-        </ul>
 
         <div className="line"></div>
         <p className="subtitle">
