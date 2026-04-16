@@ -4,13 +4,12 @@
     "subtitle": "Here you can find more info about me and my work",
     "accomplishments": {
       "title": "Accomplishments:",
-      "expert": "Distributed and reactive systems, apache kafka ecosystem expert",
+      "expertise": "Distributed, realtime event-streaming systems, apache kafka ecosystem expert",
       "author": "Author of professional software development articles",
       "community": "\"Videogame industry development organization\" (RU) Member and expert",
-      "game": "Own browser 2d multiplayer and game server engine",
       "hack": "Russian IT architecture federal hackathon 1st win",
       "framework": "Indie multiplayers development framework owner",
-      "projects": "Federal systems implementation from scratch and leading to production, java backend technical management, expertise and team leading. Gratitude from CTOs and CEOs"
+      "projects": "Federal systems implementation from scratch to production, java backend technical management, team leading. Gratitude from CTOs and CEOs"
     },
     "publications": {
       "title": "Publications:",

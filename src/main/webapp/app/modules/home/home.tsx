@@ -28,11 +28,10 @@ export const Home = () => {
         <p>
           <ul>
             <li><Translate contentKey="about.accomplishments.author"></Translate></li>
-            <li><Translate contentKey="about.accomplishments.expert"></Translate></li>
+            <li><Translate contentKey="about.accomplishments.expertise"></Translate></li>
             <li><Translate contentKey="about.accomplishments.community"></Translate>&nbsp;<a
               href="https://forgamedev.ru/">forgamedev.ru</a></li>
             <li><Translate contentKey="about.accomplishments.projects"></Translate></li>
-            <li><Translate contentKey="about.accomplishments.game"></Translate></li>
             <li><Translate contentKey="about.accomplishments.hack"></Translate></li>
             <li><a
               href="https://github.com/tfkfan/orbital">Orbital</a> &nbsp;<Translate
@@ -45,15 +44,15 @@ export const Home = () => {
           <Translate contentKey="about.skills.title"></Translate>
         </p>
         <p className="skills">
-          <span>Java</span>, <span>Kotlin</span>, C/C++, Golang, JavaScript,
-          TypeScript, <span>VertX</span>, <span>Spring</span>, Micronaut, <span>Quarkus</span>,
+          <span>Java</span>, <span>Kotlin</span>, <span>Quarkus</span>, <span>Spring</span>, <span>VertX</span>, <span>Apache Kafka ecosystem (schema registry, connectors, ksql, streams)</span>, <span>kubernetes</span>, <span>helm</span>, <span>strimzi</span>, <span>Apache flink</span>,
+          <span>platform solutions</span>, C/C++, Golang, JavaScript, TypeScript, Micronaut,
           RxJava, GraalVM, HTML, CSS, Phaser 3,
           React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, QueryDSL, Panache, PostgreSQL, MySQL, MSSQL, MongoDB,
           ClickHouse, Debezium,
-          Redis, Infinispan, Hazelcast, ElasticSearch, Lucene, <span>Apache Kafka Ecosystem (schema registry, connectors, ksql, streams)</span>,
-          RabbitMQ, Apache Flink, MQTT, STOMP, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2,
+          Redis, Infinispan, Hazelcast, ElasticSearch, Lucene,
+          RabbitMQ, MQTT, STOMP, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2,
           OpenAPI generator,
-          JHipster generator, Linux, Docker, Docker-Compose, <span>Kubernetes</span>, Helm, Helmfile, Ansible, CICD,
+          JHipster generator, Linux, Docker, Docker-Compose, Helmfile, Ansible, CICD,
           Camunda, Istio/Linkerd, ArchiMate, BPMN, C4
         </p>
         <div className="line"></div>
