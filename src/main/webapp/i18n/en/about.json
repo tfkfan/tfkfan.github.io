@@ -9,7 +9,7 @@
       "community": "\"Videogame industry development organization\" (RU) Member and expert",
       "hack": "Russian IT architecture federal hackathon 1st win",
       "framework": "Indie multiplayers development framework owner",
-      "projects": "Federal systems implementation from scratch to production, java backend technical management, team leading. Gratitude from CTOs and CEOs"
+      "projects": "Large scale systems implementation from scratch to production, golang+java backend technical management, team leading. Gratitude from CTOs and CEOs"
     },
     "publications": {
       "title": "Publications:",
@@ -22,7 +22,7 @@
       "title": "Skills:"
     },
     "orbital": {
-      "title": "Framework",
+      "title": "Framework (hobbie)",
       "main": "This is high-performance vert.x based distributed java game server designed for realtime 2D/3D multiplayer games requiring low-latency realtime computations",
       "subtext": "Project is in active development. Looking for contributors and sponsors to make this stuff widely used in future. Support this project by stars on github If you like idea.",
       "features": {
@@ -50,8 +50,8 @@
         "description": "Java/Vertx/Typescript/React/Phaser highload game room and battle-royale based multiplayer"
       },
       "esia": {
-        "title": "Esia captcha",
-        "description": "Highload captcha generator and firewall for esia/gosuslugi"
+        "title": "Captcha",
+        "description": "Highload captcha generator and firewall for"
       },
       "bank-admin": {
         "title": "Banking admin dashboard",
@@ -62,6 +62,6 @@
         "description": "Typescript, react"
       }
     },
-    "main": "I am software developer since 2015 with extensive experience in commercial/fintech/highload/distributed systems development including games. Tech lead/system architect, team lead, mentor."
+    "main": "I am software developer since 2013 with extensive experience in commercial/fintech/highload/distributed systems development. Golang and java are primary. Team lead, mentor, apache kafka expert."
   }
 }

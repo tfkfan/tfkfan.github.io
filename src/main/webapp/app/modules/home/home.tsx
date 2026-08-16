@@ -27,12 +27,8 @@ export const Home = () => {
         </p>
         <p>
           <ul>
-            <li><Translate contentKey="about.accomplishments.author"></Translate></li>
             <li><Translate contentKey="about.accomplishments.expertise"></Translate></li>
-            <li><Translate contentKey="about.accomplishments.community"></Translate>&nbsp;<a
-              href="https://forgamedev.ru/">forgamedev.ru</a></li>
             <li><Translate contentKey="about.accomplishments.projects"></Translate></li>
-            <li><Translate contentKey="about.accomplishments.hack"></Translate></li>
             <li><a
               href="https://github.com/tfkfan/orbital">Orbital</a> &nbsp;<Translate
               contentKey="about.accomplishments.framework"></Translate></li>
@@ -44,16 +40,21 @@ export const Home = () => {
           <Translate contentKey="about.skills.title"></Translate>
         </p>
         <p className="skills">
-          <span>Java</span>, <span>Kotlin</span>, <span>Quarkus</span>, <span>Spring</span>, <span>VertX</span>, <span>Apache Kafka ecosystem (schema registry, connectors, ksql, streams)</span>, <span>kubernetes</span>, <span>helm</span>, <span>strimzi</span>, <span>Apache flink</span>,
-          <span>platform solutions</span>, C/C++, Golang, JavaScript, TypeScript, Micronaut,
-          RxJava, GraalVM, HTML, CSS, Phaser 3,
-          React, Angular, NodeJS, Webpack, NPM, Hibernate, JPA, QueryDSL, Panache, PostgreSQL, MySQL, MSSQL, MongoDB,
-          ClickHouse, Debezium,
-          Redis, Infinispan, Hazelcast, ElasticSearch, Lucene,
-          RabbitMQ, MQTT, STOMP, OpenAPI, GraphQL, SOAP, Websocket, HTTP/HTTPS, TLS/SSL, OIDC, Oauth2,
-          OpenAPI generator,
-          JHipster generator, Linux, Docker, Docker-Compose, Helmfile, Ansible, CICD,
-          Camunda, Istio/Linkerd, ArchiMate, BPMN, C4
+          <span>Golang</span>,&nbsp;<span>Java</span>,&nbsp;<span>Kotlin</span>,&nbsp;Gin,
+          &nbsp;Echo,&nbsp;Gorilla,&nbsp;GORM,&nbsp;Quarkus,&nbsp;Micronaut,&nbsp;Spring framework,&nbsp;VertX,
+          &nbsp;<span>Apache Kafka ecosystem (schema registry, connectors, ksql, streams)</span>,
+          &nbsp;<span>kubernetes</span>,&nbsp;<span>AWS</span>,&nbsp;<span>helm</span>,&nbsp;<span>strimzi</span>,&nbsp;<span>Apache flink</span>,
+          &nbsp;terraform,&nbsp;<span>platform solutions</span>,&nbsp;C/C++,&nbsp;Python,&nbsp;JavaScript,
+          &nbsp;TypeScript,&nbsp;RxJava,&nbsp;GraalVM,&nbsp;HTML,&nbsp;CSS,&nbsp;Phaser 3,
+          &nbsp;React,&nbsp;Angular,&nbsp;NodeJS,&nbsp;Webpack,&nbsp;NPM,&nbsp;Hibernate,&nbsp;JPA,
+          &nbsp;QueryDSL,&nbsp;Panache,&nbsp;PostgreSQL,&nbsp;MySQL,&nbsp;MSSQL,&nbsp;MongoDB,
+          &nbsp;ClickHouse, Debezium CDC, Greenplum, PySpark, Apache spark,
+          &nbsp;Memcached,&nbsp;DynamoDB,&nbsp;Redis,&nbsp;Infinispan,&nbsp;Hazelcast,&nbsp;ElasticSearch,
+          &nbsp;Lucene,&nbsp;S3,&nbsp;RabbitMQ,&nbsp;MQTT,&nbsp;gRPC,&nbsp;STOMP,&nbsp;OpenAPI,&nbsp;GraphQL,&nbsp;SOAP,
+          &nbsp;Websocket,&nbsp;HTTP/HTTPS,&nbsp;TLS/SSL,&nbsp;OIDC,&nbsp;Oauth2,
+          &nbsp;OpenAPI generators,&nbsp;AsyncAPI generators,&nbsp;Protobuf,&nbsp;Avro,
+          &nbsp;JHipster generator, Linux,&nbsp;Docker,&nbsp;Docker-Compose,&nbsp;Helmfile,&nbsp;Ansible,
+          &nbsp;CICD,&nbsp;Camunda,&nbsp;Istio/Linkerd,&nbsp;ArchiMate,&nbsp;BPMN,&nbsp;C4
         </p>
         <div className="line"></div>
         <p className="subtitle">

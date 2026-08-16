@@ -35,9 +35,9 @@ const Header = (props: IHeaderProps) => {
         <Brand/>
         <Collapse isOpen={menuOpen} navbar>
           <Nav id="header-tabs" className="ms-auto" navbar>
-            <Publications/>
+        {/*    <Publications/>
             <Awards/>
-            <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange}/>
+            <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange}/>*/}
           </Nav>
         </Collapse>
       </Navbar>
