@@ -7,10 +7,13 @@
 (function () {
   SITE.i18n = SITE.i18n || {};
   SITE.i18n.ja = {
+    'Spatial and other kind of game data calculations': '空間データをはじめとするゲームデータの計算',
+    'Low latency highload async backend.': '低レイテンシ・高負荷の非同期バックエンド。',
+    'Automation of any business process with modern approaches': 'あらゆる業務プロセスを最新のアプローチで自動化',
+    'Reconciliation, retries, eventual consistency and high security.': '照合、リトライ、結果整合性、そして高いセキュリティ。',
     'Five ways to plug me into a team. Open any row for the short version of what you get.': 'チームに入る 5 つの形。行を開くと、得られるものが短くまとまっています。',
     'Apache Kafka, Apache Flink, Data & Streaming platforms': 'Apache Kafka、Apache Flink、データ & ストリーミング基盤',
 
-    'AI that removes work instead of adding a demo.': 'デモを足すのではなく、仕事を減らす AI。',
 
     'I make AI integrations, RAG systems, chat/voice bots, realtime applications, high-load and event-driven microservices in Go and Java.': 'Go と Java で、AI 統合、RAG システム、チャット・音声ボット、リアルタイムアプリケーション、高負荷なイベント駆動マイクロサービスを構築します。',
     'AI integrations · RAG · chat & voice bots': 'AI 統合 · RAG · チャット & 音声ボット',
@@ -96,14 +99,11 @@
     'Runtime rightsizing and deletion of the old path — otherwise it never dies.': 'ランタイムの適正化と古い経路の削除 —— さもないと永遠に残ります。',
     '20+ Go microservices · 40%+ cloud cost cut (≈ $500K/year)': 'Go マイクロサービス 20 以上 · クラウドコスト 40%+ 削減（年約 50 万ドル）',
     'Authoritative servers where the clock is the enemy.': '時計が敵になる権威サーバー。',
-    'Non-blocking cores with allocation discipline and lock-free hot paths.': 'アロケーション規律とロックフリーなホットパスを備えたノンブロッキングコア。',
     'Matchmaking, room lifecycle, reconnect and state resynchronisation.': 'マッチメイキング、ルームのライフサイクル、再接続と状態の再同期。',
-    'Client prediction and reconciliation, so it feels instant without trusting the client.': 'クライアント予測とリコンシリエーション。即時性を感じさせつつ、クライアントは信頼しない。',
     '20K+ msg/s MQTT ingestion · Orbital, an open-source game server framework': '毎秒 20K+ メッセージの MQTT 取り込み · オープンソースのゲームサーバーフレームワーク Orbital',
     'Fintech & payments': 'フィンテック & 決済',
     'Money-grade backends: correctness first, throughput second.': 'お金を扱うバックエンド：まず正しさ、次にスループット。',
     'Sagas with compensating actions, idempotency keys and an auditable ledger.': '補償処理を伴う Saga、冪等キー、監査可能な台帳。',
-    'Reconciliation, retries and dead-letter handling you can operate at 03:00.': '午前 3 時でも運用できる照合、リトライ、デッドレター処理。',
     'Audit trails, PII boundaries and least-privilege access by design.': '監査証跡、PII の境界、最小権限アクセスを設計段階から。',
     '100K+ TPS credit core · 10K RPS payments API · +20% operational income': '100K+ TPS のクレジット基盤 · 10K RPS の決済 API · 営業収益 +20%',
     'Agentic pipelines & AI integration': 'エージェントパイプライン & AI 統合',

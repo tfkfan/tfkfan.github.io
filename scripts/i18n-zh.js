@@ -7,10 +7,13 @@
 (function () {
   SITE.i18n = SITE.i18n || {};
   SITE.i18n.zh = {
+    'Spatial and other kind of game data calculations': '空间及其他类型的游戏数据计算',
+    'Low latency highload async backend.': '低延迟、高负载的异步后端。',
+    'Automation of any business process with modern approaches': '用现代方法自动化任何业务流程',
+    'Reconciliation, retries, eventual consistency and high security.': '对账、重试、最终一致性与高安全性。',
     'Five ways to plug me into a team. Open any row for the short version of what you get.': '五种加入团队的方式。展开任意一行，查看你能得到什么。',
     'Apache Kafka, Apache Flink, Data & Streaming platforms': 'Apache Kafka、Apache Flink、数据与流处理平台',
 
-    'AI that removes work instead of adding a demo.': '真正减少工作量的 AI，而不是又一个演示。',
 
     'I make AI integrations, RAG systems, chat/voice bots, realtime applications, high-load and event-driven microservices in Go and Java.': '我用 Go 和 Java 构建 AI 集成、RAG 系统、聊天与语音机器人、实时应用，以及高负载事件驱动微服务。',
     'AI integrations · RAG · chat & voice bots': 'AI 集成 · RAG · 聊天与语音机器人',
@@ -96,14 +99,11 @@
     'Runtime rightsizing and deletion of the old path — otherwise it never dies.': '运行时资源调优并删除旧路径 —— 否则它永远不会消失。',
     '20+ Go microservices · 40%+ cloud cost cut (≈ $500K/year)': '20+ 个 Go 微服务 · 云成本降低 40%+（约 50 万美元/年）',
     'Authoritative servers where the clock is the enemy.': '以时间为敌的权威服务器。',
-    'Non-blocking cores with allocation discipline and lock-free hot paths.': '非阻塞内核：严格的分配纪律与无锁热路径。',
     'Matchmaking, room lifecycle, reconnect and state resynchronisation.': '匹配、房间生命周期、断线重连与状态重同步。',
-    'Client prediction and reconciliation, so it feels instant without trusting the client.': '客户端预测与回滚校正：体验即时，但不信任客户端。',
     '20K+ msg/s MQTT ingestion · Orbital, an open-source game server framework': '20K+ 条/秒 MQTT 接入 · Orbital，开源游戏服务器框架',
     'Fintech & payments': '金融科技与支付',
     'Money-grade backends: correctness first, throughput second.': '资金级后端：正确性优先，吞吐其次。',
     'Sagas with compensating actions, idempotency keys and an auditable ledger.': '带补偿动作的 Saga、幂等键与可审计账本。',
-    'Reconciliation, retries and dead-letter handling you can operate at 03:00.': '对账、重试与死信处理 —— 凌晨三点也能运维。',
     'Audit trails, PII boundaries and least-privilege access by design.': '默认具备审计追溯、PII 边界与最小权限访问。',
     '100K+ TPS credit core · 10K RPS payments API · +20% operational income': '100K+ TPS 信贷核心 · 10K RPS 支付 API · 运营收入 +20%',
     'Agentic pipelines & AI integration': '智能体流水线与 AI 集成',
