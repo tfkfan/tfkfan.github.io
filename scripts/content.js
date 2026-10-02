@@ -103,7 +103,6 @@ SITE.ui = {
     'télétravail · permis US et UE',
     'trabalho remoto · permissão EUA e UE'
   ),
-  hire: SITE.T('hire me', 'contrátame', 'anfragen', 'me contacter', 'contrate-me'),
   scroll: SITE.T('scroll', 'desplazar', 'scrollen', 'défiler', 'role'),
   langLabel: SITE.T('Language', 'Idioma', 'Sprache', 'Langue', 'Idioma'),
 

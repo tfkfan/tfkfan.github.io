@@ -24,7 +24,6 @@
 
     /* --- header, buttons, misc UI --- */
     'open to remote · US, EU work permit': 'リモート可 · 米国・EU 就労許可',
-    'hire me': '相談する',
     'scroll': 'スクロール',
     'Language': '言語',
     'send email': 'メールを送る',

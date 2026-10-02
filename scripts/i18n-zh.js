@@ -24,7 +24,6 @@
 
     /* --- header, buttons, misc UI --- */
     'open to remote · US, EU work permit': '接受远程 · 美国、欧盟工作许可',
-    'hire me': '联系我',
     'scroll': '滚动',
     'Language': '语言',
     'send email': '发送邮件',

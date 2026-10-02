@@ -90,8 +90,6 @@
     $('#btn-lang').innerHTML = langShort(state.lang) + ' <i class="caret-d"></i>';
     $('#btn-lang').setAttribute('title', t(SITE.ui.langLabel));
     renderLangMenu();
-    $('#btn-mail').textContent = t(SITE.ui.hire);
-    $('#btn-mail').href = 'mailto:' + SITE.meta.email + '?subject=' + encodeURIComponent(t(SITE.ui.mailSubject));
     $('#impact-title').textContent = t(SITE.ui.impactTitle);
     $('#delivered-label').textContent = t(SITE.ui.delivered);
     $('#services-title').textContent = t(SITE.ui.servicesTitle);
