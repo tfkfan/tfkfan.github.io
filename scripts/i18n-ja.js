@@ -44,7 +44,7 @@
     'mount /home/artem/portfolio': 'マウント /home/artem/portfolio',
     'load profile — staff backend engineer': 'プロフィール読み込み —— スタッフバックエンドエンジニア',
     'index 7 sections · 7 languages': 'セクション 7 件を索引化 · 7 言語',
-    'link metrics — 500K+ msg/s · 100K+ TPS · 10K RPS': 'メトリクス連携 —— 毎秒 500K+ · 100K+ TPS · 10K RPS',
+    'link metrics — 500K+ msg/s · 100K+ TPS · 100K+ RPS': 'メトリクス連携 —— 毎秒 500K+ · 100K+ TPS · 100K+ RPS',
     'ready. scroll to explore.': '準備完了。スクロールしてご覧ください。',
 
     /* --- hero --- */

@@ -232,7 +232,7 @@ SITE.ui = {
     SITE.T('mount /home/artem/portfolio', 'montando /home/artem/portfolio', 'mounte /home/artem/portfolio', 'montage /home/artem/portfolio', 'montando /home/artem/portfolio'),
     SITE.T('load profile — staff backend engineer', 'cargando perfil — ingeniero backend staff', 'Profil laden — Staff Backend Engineer', 'chargement du profil — ingénieur backend staff', 'carregando perfil — engenheiro backend staff'),
     SITE.T('index 7 sections · 7 languages', 'indexando 7 secciones · 7 idiomas', 'indexiere 7 Abschnitte · 7 Sprachen', 'indexation de 7 sections · 7 langues', 'indexando 7 secções · 7 idiomas'),
-    SITE.T('link metrics — 500K+ msg/s · 100K+ TPS · 10K RPS', 'conectando métricas — 500K+ msg/s · 100K+ TPS · 10K RPS', 'Metriken verbinden — 500K+ msg/s · 100K+ TPS · 10K RPS', 'connexion des métriques — 500K+ msg/s · 100K+ TPS · 10K RPS', 'ligando métricas — 500K+ msg/s · 100K+ TPS · 10K RPS'),
+    SITE.T('link metrics — 500K+ msg/s · 100K+ TPS · 100K+ RPS', 'conectando métricas — 500K+ msg/s · 100K+ TPS · 100K+ RPS', 'Metriken verbinden — 500K+ msg/s · 100K+ TPS · 100K+ RPS', 'connexion des métriques — 500K+ msg/s · 100K+ TPS · 100K+ RPS', 'ligando métricas — 500K+ msg/s · 100K+ TPS · 100K+ RPS'),
     SITE.T('ready. scroll to explore.', 'listo. desplázate para explorar.', 'bereit. Scrollen zum Erkunden.', 'prêt. faites défiler pour explorer.', 'pronto. role para explorar.')
   ]
 };
@@ -267,7 +267,7 @@ SITE.numbers = [
     sub: 'GitLab'
   },
   {
-    v: 10, suffix: 'K RPS',
+    v: 100, suffix: '+ K RPS',
     label: SITE.T('payments services under real load', 'servicios de pago bajo carga real', 'Zahlungsdienste unter realer Last', 'services de paiement en charge réelle', 'serviços de pagamento sob carga real'),
     sub: 'Bling'
   },

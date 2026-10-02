@@ -44,7 +44,7 @@
     'mount /home/artem/portfolio': '挂载 /home/artem/portfolio',
     'load profile — staff backend engineer': '加载档案 —— Staff 后端工程师',
     'index 7 sections · 7 languages': '索引 7 个板块 · 7 种语言',
-    'link metrics — 500K+ msg/s · 100K+ TPS · 10K RPS': '接入指标 —— 500K+ 条/秒 · 100K+ TPS · 10K RPS',
+    'link metrics — 500K+ msg/s · 100K+ TPS · 100K+ RPS': '接入指标 —— 500K+ 条/秒 · 100K+ TPS · 100K+ RPS',
     'ready. scroll to explore.': '就绪。向下滚动开始浏览。',
 
     /* --- hero --- */
