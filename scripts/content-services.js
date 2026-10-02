@@ -1,5 +1,5 @@
 /* =============================================================================
-   content-services.js — the eight services and the nine roles.
+   content-services.js — the five services and the nine roles.
    T(en, es, de, fr, pt)
    ========================================================================== */
 
@@ -10,13 +10,11 @@
     {
       n: '01',
       title: T('Go backend engineering', 'Backend en Go', 'Go-Backend-Entwicklung', 'Backend en Go', 'Backend em Go'),
-      one: T(
-        'Production Go services, from first commit to steady load.',
+      one: T('Production Go services, from first commit to steady load.',
         'Servicios Go en producción: del primer commit a la carga estable.',
         'Produktionsreife Go-Services — vom ersten Commit bis zur stabilen Last.',
         'Services Go en production, du premier commit à la charge stable.',
-        'Serviços Go em produção: do primeiro commit à carga estável.'
-      ),
+        'Serviços Go em produção: do primeiro commit à carga estável.'),
       bullets: [
         T('APIs and workers designed around explicit SLOs, budgets and failure modes.',
           'APIs y workers diseñados con SLOs explícitos, presupuestos y modos de fallo.',
@@ -34,16 +32,15 @@
           'Observabilité et tests par défaut — métriques, traces, tests de charge en CI.',
           'Observabilidade e testes por padrão — métricas, traces e testes de carga no CI.')
       ],
-      proof: T('10K RPS payments backend · captcha service built from scratch in 7 months',
-        'backend de pagos a 10K RPS · servicio captcha creado desde cero en 7 meses',
-        'Zahlungs-Backend mit 10K RPS · Captcha-Service in 7 Monaten neu gebaut',
-        'backend de paiement à 10K RPS · service captcha créé de zéro en 7 mois',
-        'backend de pagamentos a 10K RPS · serviço captcha criado de raiz em 7 meses'),
       chips: ['Go', 'gRPC', 'REST', 'WebSocket', 'PostgreSQL', 'Redis', 'Prometheus', 'Kubernetes']
     },
     {
       n: '02',
-      title: T('Kafka & Flink streaming', 'Streaming con Kafka y Flink', 'Kafka- & Flink-Streaming', 'Streaming Kafka et Flink', 'Streaming com Kafka e Flink'),
+      title: T('Apache Kafka, Apache Flink, Data & Streaming platforms',
+        'Plataformas de Apache Kafka, Apache Flink, datos y streaming',
+        'Apache Kafka, Apache Flink, Daten- & Streaming-Plattformen',
+        'Plateformes Apache Kafka, Apache Flink, données et streaming',
+        'Plataformas Apache Kafka, Apache Flink, dados e streaming'),
       one: T('Event-driven platforms at half a million messages per second.',
         'Plataformas event-driven a medio millón de mensajes por segundo.',
         'Event-getriebene Plattformen mit einer halben Million Nachrichten pro Sekunde.',
@@ -55,6 +52,11 @@
           'Cluster- und Topic-Design: Partitionierung, Retention, Reihenfolge, Kapazitätsmodell.',
           'Conception cluster et topics : partitionnement, rétention, ordre, modèle de capacité.',
           'Desenho de cluster e tópicos: particionamento, retenção, ordem e modelo de capacidade.'),
+        T('Kubernetes-native platforms with the Strimzi operator: declarative Kafka clusters, rolling upgrades, GitOps-managed topics.',
+          'Plataformas nativas de Kubernetes con el operador Strimzi: clústeres Kafka declarativos, actualizaciones progresivas y topics gestionados con GitOps.',
+          'Kubernetes-native Plattformen mit dem Strimzi-Operator: deklarative Kafka-Cluster, Rolling Upgrades, per GitOps verwaltete Topics.',
+          'Plateformes natives Kubernetes avec l’opérateur Strimzi : clusters Kafka déclaratifs, mises à jour progressives, topics gérés en GitOps.',
+          'Plataformas nativas de Kubernetes com o operador Strimzi: clusters Kafka declarativos, atualizações progressivas e tópicos geridos por GitOps.'),
         T('CDC with Debezium so you stream from systems you will never rewrite.',
           'CDC con Debezium para hacer streaming desde sistemas que nunca reescribirás.',
           'CDC mit Debezium — Streaming aus Systemen, die Sie nie neu schreiben werden.',
@@ -66,48 +68,11 @@
           'Jobs Flink avec checkpointing, gouvernance des schémas et garanties de livraison honnêtes.',
           'Jobs Flink com checkpointing, governança de esquemas e garantias de entrega honestas.')
       ],
-      proof: T('500K+ msg/sec platform delivered in 8 months · −15% dispatch cost',
-        'plataforma de 500K+ msg/s entregada en 8 meses · −15% en coste de reparto',
-        '500K+ Nachrichten/s in 8 Monaten geliefert · −15 % Dispositionskosten',
-        'plateforme 500K+ msg/s livrée en 8 mois · −15 % de coût de dispatch',
-        'plataforma de 500K+ msg/s entregue em 8 meses · −15% no custo de despacho'),
-      chips: ['Kafka', 'Kafka Streams', 'Flink', 'Spark', 'Debezium', 'Avro', 'ClickHouse', 'Java']
+      chips: ['Kafka', 'Kafka Streams', 'Flink', 'Spark', 'Debezium', 'Strimzi', 'Kubernetes', 'Avro', 'ClickHouse', 'Java']
     },
     {
       n: '03',
-      title: T('Monolith to microservices', 'Del monolito a microservicios', 'Monolith zu Microservices', 'Du monolithe aux microservices', 'Do monolito aos microsserviços'),
-      one: T('Decomposition in reversible steps, not a big-bang rewrite.',
-        'Descomposición en pasos reversibles, no una reescritura total.',
-        'Zerlegung in umkehrbaren Schritten statt Big-Bang-Rewrite.',
-        'Décomposition par étapes réversibles, pas une réécriture globale.',
-        'Decomposição em passos reversíveis, não uma reescrita total.'),
-      bullets: [
-        T('Cost and coupling model first: what to split, what to leave alone, and why.',
-          'Primero el modelo de coste y acoplamiento: qué separar, qué dejar intacto y por qué.',
-          'Zuerst Kosten- und Kopplungsmodell: was trennen, was lassen, und warum.',
-          'D’abord le modèle de coûts et de couplage : quoi séparer, quoi laisser, et pourquoi.',
-          'Primeiro o modelo de custo e acoplamento: o que separar, o que deixar e porquê.'),
-        T('Strangler-fig migration with dual writes, shadow traffic and feature flags.',
-          'Migración strangler-fig con escrituras duales, tráfico en sombra y feature flags.',
-          'Strangler-Fig-Migration mit Dual Writes, Shadow Traffic und Feature Flags.',
-          'Migration strangler-fig avec doubles écritures, trafic fantôme et feature flags.',
-          'Migração strangler-fig com escritas duplas, tráfego sombra e feature flags.'),
-        T('Runtime rightsizing and deletion of the old path — otherwise it never dies.',
-          'Ajuste del runtime y eliminación del camino antiguo: si no, nunca muere.',
-          'Rightsizing der Runtime und Löschen des alten Pfads — sonst stirbt er nie.',
-          'Rightsizing du runtime et suppression de l’ancien chemin — sinon il ne meurt jamais.',
-          'Rightsizing do runtime e remoção do caminho antigo — caso contrário, nunca morre.')
-      ],
-      proof: T('20+ Go microservices · 40%+ cloud cost cut (≈ $500K/year)',
-        'más de 20 microservicios Go · −40% de coste cloud (≈ 500 mil $/año)',
-        '20+ Go-Microservices · 40 %+ geringere Cloud-Kosten (≈ 500.000 $/Jahr)',
-        '20+ microservices Go · −40 % de coûts cloud (≈ 500 K$/an)',
-        'mais de 20 microsserviços Go · −40% de custo cloud (≈ 500 mil $/ano)'),
-      chips: ['Kubernetes', 'Terraform', 'Istio', 'Go', 'ArgoCD', 'PostgreSQL', 'Prometheus']
-    },
-    {
-      n: '04',
-      title: T('Real-time & game backends', 'Backends en tiempo real y juegos', 'Echtzeit- & Game-Backends', 'Backends temps réel et jeux', 'Backends em tempo real e jogos'),
+      title: T('Realtime, games, multiplayers', 'Tiempo real, juegos, multijugador', 'Echtzeit, Games, Multiplayer', 'Temps réel, jeux, multijoueur', 'Tempo real, jogos, multijogador'),
       one: T('Authoritative servers where the clock is the enemy.',
         'Servidores autoritativos donde el reloj es el enemigo.',
         'Autoritative Server, bei denen die Uhr der Gegner ist.',
@@ -130,15 +95,10 @@
           'Prédiction et réconciliation côté client : instantané sans faire confiance au client.',
           'Predição e reconciliação no cliente: parece instantâneo sem confiar no cliente.')
       ],
-      proof: T('20K+ msg/s MQTT ingestion · Orbital, an open-source game server framework',
-        'ingesta MQTT de 20K+ msg/s · Orbital, framework open source de servidores de juego',
-        '20K+ Nachrichten/s MQTT-Ingestion · Orbital, Open-Source-Game-Server-Framework',
-        'ingestion MQTT 20K+ msg/s · Orbital, framework open source de serveurs de jeu',
-        'ingestão MQTT de 20K+ msg/s · Orbital, framework open source de servidores de jogos'),
       chips: ['Java', 'Vert.x', 'Netty', 'WebSocket', 'MQTT', 'Phaser 3', 'TypeScript']
     },
     {
-      n: '05',
+      n: '04',
       title: T('Fintech & payments', 'Fintech y pagos', 'Fintech & Payments', 'Fintech et paiements', 'Fintech e pagamentos'),
       one: T('Money-grade backends: correctness first, throughput second.',
         'Backends de nivel financiero: primero la corrección, después el rendimiento.',
@@ -162,15 +122,10 @@
           'Pistes d’audit, périmètres PII et accès au moindre privilège par conception.',
           'Trilhas de auditoria, limites de PII e acesso de menor privilégio por desenho.')
       ],
-      proof: T('100K+ TPS credit core · 10K RPS payments API · +20% operational income',
-        'core de crédito a 100K+ TPS · API de pagos a 10K RPS · +20% de ingreso operativo',
-        'Kredit-Kern mit 100K+ TPS · Zahlungs-API mit 10K RPS · +20 % operativer Ertrag',
-        'cœur crédit à 100K+ TPS · API de paiement à 10K RPS · +20 % de revenu opérationnel',
-        'core de crédito a 100K+ TPS · API de pagamentos a 10K RPS · +20% de receita operacional'),
       chips: ['Go', 'Java', 'Kafka', 'Saga', 'PostgreSQL', 'gRPC', 'OIDC']
     },
     {
-      n: '06',
+      n: '05',
       title: T('Agentic pipelines & AI integration', 'Pipelines agénticos e integración de IA', 'Agentische Pipelines & KI-Integration', 'Pipelines agentiques et intégration IA', 'Pipelines agênticos e integração de IA'),
       one: T('AI that removes work instead of adding a demo.',
         'IA que elimina trabajo en lugar de añadir una demo.',
@@ -178,6 +133,11 @@
         'De l’IA qui supprime du travail au lieu d’ajouter une démo.',
         'IA que remove trabalho em vez de acrescentar uma demo.'),
       bullets: [
+        T('Agent harnesses and MCP servers that expose your tools and data to models safely.',
+          'Harnesses de agentes y servidores MCP que exponen tus herramientas y datos a los modelos de forma segura.',
+          'Agent-Harnesses und MCP-Server, die Ihre Tools und Daten sicher für Modelle bereitstellen.',
+          'Harnais d’agents et serveurs MCP qui exposent vos outils et données aux modèles en toute sécurité.',
+          'Harnesses de agentes e servidores MCP que expõem as suas ferramentas e dados aos modelos em segurança.'),
         T('Agentic pipelines that chain tools, retrieval and models into one reliable flow.',
           'Pipelines agénticos que encadenan herramientas, retrieval y modelos en un flujo fiable.',
           'Agentische Pipelines, die Tools, Retrieval und Modelle zu einem verlässlichen Ablauf verbinden.',
@@ -194,82 +154,10 @@
           'Garde-fous, jeux d’évaluation, budgets de coût et de latence, replis raisonnables.',
           'Guardrails, conjuntos de avaliação, orçamentos de custo e latência, fallbacks sensatos.')
       ],
-      proof: T('50+ engineering hours saved every month with an LLM + RAG review toolkit',
-        'más de 50 horas de ingeniería ahorradas al mes con un toolkit de revisión LLM + RAG',
-        '50+ eingesparte Ingenieursstunden pro Monat mit einem LLM-+-RAG-Review-Toolkit',
-        '50+ heures d’ingénierie économisées par mois avec une boîte à outils LLM + RAG',
-        'mais de 50 horas de engenharia poupadas por mês com um toolkit de revisão LLM + RAG'),
-      chips: ['LLM APIs', 'RAG', 'Agents', 'Qdrant', 'Weaviate', 'Python', 'Go', 'Kafka']
+      chips: ['LLM APIs', 'RAG', 'MCP', 'Agent harnesses', 'Chat & voice bots', 'Qdrant', 'Weaviate', 'Python', 'Go']
     },
-    {
-      n: '07',
-      title: T('Platform, Kubernetes & DevOps', 'Plataforma, Kubernetes y DevOps', 'Plattform, Kubernetes & DevOps', 'Plateforme, Kubernetes et DevOps', 'Plataforma, Kubernetes e DevOps'),
-      one: T('Make the safe path the easy path.',
-        'Hacer que el camino seguro sea el camino fácil.',
-        'Den sicheren Weg zum einfachen Weg machen.',
-        'Faire du chemin sûr le chemin facile.',
-        'Tornar o caminho seguro no caminho fácil.'),
-      bullets: [
-        T('Infrastructure as code with Terraform and Helm — reviewable and reproducible.',
-          'Infraestructura como código con Terraform y Helm: revisable y reproducible.',
-          'Infrastructure as Code mit Terraform und Helm — reviewbar und reproduzierbar.',
-          'Infrastructure as code avec Terraform et Helm — révisable et reproductible.',
-          'Infraestrutura como código com Terraform e Helm — revisível e reproduzível.'),
-        T('GitOps delivery with ArgoCD: progressive rollout, instant rollback.',
-          'Entrega GitOps con ArgoCD: despliegue progresivo y rollback instantáneo.',
-          'GitOps-Auslieferung mit ArgoCD: progressives Rollout, sofortiger Rollback.',
-          'Livraison GitOps avec ArgoCD : déploiement progressif, rollback instantané.',
-          'Entrega GitOps com ArgoCD: rollout progressivo e rollback instantâneo.'),
-        T('Kubernetes cost and reliability work, from rightsizing to SLO alerting.',
-          'Coste y fiabilidad en Kubernetes: del rightsizing a las alertas por SLO.',
-          'Kosten- und Zuverlässigkeitsarbeit in Kubernetes: von Rightsizing bis SLO-Alerting.',
-          'Travail sur les coûts et la fiabilité Kubernetes : du rightsizing à l’alerting SLO.',
-          'Trabalho de custo e fiabilidade em Kubernetes: de rightsizing a alertas por SLO.')
-      ],
-      proof: T('40%+ cloud cost reduction after rightsizing and decomposition',
-        'reducción del coste cloud superior al 40% tras rightsizing y descomposición',
-        '40 %+ geringere Cloud-Kosten nach Rightsizing und Zerlegung',
-        'plus de 40 % de réduction des coûts cloud après rightsizing et décomposition',
-        'redução do custo cloud superior a 40% após rightsizing e decomposição'),
-      chips: ['Kubernetes', 'Docker', 'Terraform', 'Helm', 'ArgoCD', 'Istio', 'AWS', 'GCP']
-    },
-    {
-      n: '08',
-      title: T('Technical leadership & hiring', 'Liderazgo técnico y contratación', 'Technische Führung & Hiring', 'Leadership technique et recrutement', 'Liderança técnica e contratação'),
-      one: T('Measured by what the team ships when I stop being in the room.',
-        'Se mide por lo que el equipo entrega cuando ya no estoy en la sala.',
-        'Gemessen daran, was das Team liefert, wenn ich nicht mehr im Raum bin.',
-        'Se mesure à ce que l’équipe livre quand je ne suis plus dans la pièce.',
-        'Mede-se pelo que a equipa entrega quando já não estou na sala.'),
-      bullets: [
-        T('Structured hiring: real exercises, scorecards you can defend.',
-          'Contratación estructurada: ejercicios reales y scorecards defendibles.',
-          'Strukturiertes Hiring: echte Aufgaben, verteidigbare Scorecards.',
-          'Recrutement structuré : exercices réels, grilles d’évaluation défendables.',
-          'Contratação estruturada: exercícios reais e scorecards defensáveis.'),
-        T('Onboarding that produces a first production change in week one.',
-          'Onboarding que produce el primer cambio en producción en la primera semana.',
-          'Onboarding, das in Woche eins die erste Produktionsänderung liefert.',
-          'Onboarding qui produit un premier changement en production dès la première semaine.',
-          'Onboarding que produz a primeira alteração em produção na primeira semana.'),
-        T('Standards people keep: review culture, blameless incidents, mentoring with a plan.',
-          'Estándares que se mantienen: cultura de revisión, incidentes sin culpa y mentoría con plan.',
-          'Standards, die bleiben: Review-Kultur, blameless Incidents, Mentoring mit Plan.',
-          'Des standards qui tiennent : culture de revue, incidents sans blâme, mentorat planifié.',
-          'Padrões que se mantêm: cultura de revisão, incidentes sem culpa e mentoring com plano.')
-      ],
-      proof: T('Platform group grown 5 → 15+ engineers · 20+ candidates interviewed',
-        'grupo de plataforma de 5 → más de 15 ingenieros · más de 20 candidatos entrevistados',
-        'Plattformgruppe von 5 → 15+ Engineers · 20+ interviewte Kandidaten',
-        'groupe plateforme passé de 5 → 15+ ingénieurs · 20+ candidats interviewés',
-        'grupo de plataforma de 5 → mais de 15 engenheiros · mais de 20 candidatos entrevistados'),
-      chips: ['Hiring loops', 'Onboarding', 'Code review', 'Mentoring', 'ADRs', 'Roadmaps']
-    }
-  ];
+];
 
-  /* ---------------------------------------------------------------------------
-     Experience
-     ------------------------------------------------------------------------ */
   SITE.experience = [
     {
       company: 'Factorial',

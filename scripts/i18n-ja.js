@@ -7,6 +7,20 @@
 (function () {
   SITE.i18n = SITE.i18n || {};
   SITE.i18n.ja = {
+    'Five ways to plug me into a team. Open any row for the short version of what you get.': 'チームに入る 5 つの形。行を開くと、得られるものが短くまとまっています。',
+    'Apache Kafka, Apache Flink, Data & Streaming platforms': 'Apache Kafka、Apache Flink、データ & ストリーミング基盤',
+
+    'AI that removes work instead of adding a demo.': 'デモを足すのではなく、仕事を減らす AI。',
+
+    'I make AI integrations, RAG systems, chat/voice bots, realtime applications, high-load and event-driven microservices in Go and Java.': 'Go と Java で、AI 統合、RAG システム、チャット・音声ボット、リアルタイムアプリケーション、高負荷なイベント駆動マイクロサービスを構築します。',
+    'AI integrations · RAG · chat & voice bots': 'AI 統合 · RAG · チャット & 音声ボット',
+    'made by AI': 'AI 製',
+    'Realtime, games, multiplayers': 'リアルタイム、ゲーム、マルチプレイヤー',
+    'Kubernetes-native platforms with the Strimzi operator: declarative Kafka clusters, rolling upgrades, GitOps-managed topics.': 'Strimzi Operator による Kubernetes ネイティブ基盤：宣言的な Kafka クラスター、ローリングアップグレード、GitOps で管理するトピック。',
+    'Agent harnesses and MCP servers that expose your tools and data to models safely.': 'エージェントハーネスと MCP サーバー：あなたのツールとデータをモデルに安全に公開します。',
+    'RAG / chat & voice bots': 'RAG / チャット・音声ボット',
+    'Model Context Protocol servers that expose tools and data to agents.': 'MCP（Model Context Protocol）サーバー：ツールとデータをエージェントに公開します。',
+
 
     /* --- header, buttons, misc UI --- */
     'open to remote · US, EU work permit': 'リモート可 · 米国・EU 就労許可',
@@ -36,15 +50,12 @@
     'Go (Golang) · Java · Distributed Systems': 'Go (Golang) · Java · 分散システム',
     'Kafka · Flink · Event-driven architecture': 'Kafka · Flink · イベント駆動アーキテクチャ',
     'High-load fintech · real-time backends': '高負荷フィンテック · リアルタイムバックエンド',
-    'Agentic pipelines · LLM & RAG integration': 'エージェントパイプライン · LLM & RAG 統合',
-    'I build agentic pipelines, AI integrations, high-load, event-driven backends in Go and Java.': 'エージェントパイプライン、AI 統合、そして Go と Java による高負荷イベント駆動バックエンドを構築します。',
     '13+ years in production · fintech, cloud platforms, real-time streaming · delivered for GitLab, Siemens, N26, Delivery Hero, Factorial.': '本番運用 13 年以上 · フィンテック、クラウド基盤、リアルタイムストリーミング · GitLab、Siemens、N26、Delivery Hero、Factorial での実績。',
 
     /* --- section titles and leads --- */
     'Numbers I can defend.': '責任を持って説明できる数字。',
     'Delivered for': '導入実績',
     'What I do for clients.': 'クライアントのために何をするか。',
-    'Eight ways to plug me into a team. Open any row for the short version of what you get.': 'チームに入る 8 つの形。行を開くと、得られるものが短くまとまっています。',
     'Thirteen years, in order.': '13 年を、順番に。',
     'Newest first. Open an entry for what actually changed.': '新しい順。実際に何が変わったかは、項目を開いてください。',
     'Stack, with receipts.': '技術スタック、裏付けつき。',
@@ -75,19 +86,16 @@
     'Performance work on the hot path: pprof, allocation budgets, connection pooling.': 'ホットパスの性能改善：pprof、アロケーション予算、コネクションプール。',
     'Observability and tests by default — metrics, traces, load tests in CI.': '可観測性とテストを標準装備 —— メトリクス、トレース、CI での負荷テスト。',
     '10K RPS payments backend · captcha service built from scratch in 7 months': '10K RPS の決済バックエンド · 7 か月でゼロから構築した CAPTCHA サービス',
-    'Kafka & Flink streaming': 'Kafka & Flink ストリーミング',
     'Event-driven platforms at half a million messages per second.': '毎秒 50 万メッセージを扱うイベント駆動基盤。',
     'Cluster and topic design: partitioning, retention, ordering, capacity model.': 'クラスタとトピック設計：パーティション、保持、順序保証、キャパシティモデル。',
     'CDC with Debezium so you stream from systems you will never rewrite.': 'Debezium による CDC で、書き直すことのないシステムからもストリーム。',
     'Flink jobs with checkpointing, schema governance and honest delivery guarantees.': 'チェックポイント、スキーマ統制、正直な配信保証を備えた Flink ジョブ。',
     '500K+ msg/sec platform delivered in 8 months · −15% dispatch cost': '毎秒 500K+ メッセージの基盤を 8 か月で納品 · 配送コスト −15%',
-    'Monolith to microservices': 'モノリスからマイクロサービスへ',
     'Decomposition in reversible steps, not a big-bang rewrite.': '一度きりの書き直しではなく、巻き戻せる手順での分割。',
     'Cost and coupling model first: what to split, what to leave alone, and why.': 'まずコストと結合のモデル化：何を分割し、何を触らないか、その理由。',
     'Strangler-fig migration with dual writes, shadow traffic and feature flags.': 'ストラングラーフィグ移行：二重書き込み、シャドウトラフィック、フィーチャーフラグ。',
     'Runtime rightsizing and deletion of the old path — otherwise it never dies.': 'ランタイムの適正化と古い経路の削除 —— さもないと永遠に残ります。',
     '20+ Go microservices · 40%+ cloud cost cut (≈ $500K/year)': 'Go マイクロサービス 20 以上 · クラウドコスト 40%+ 削減（年約 50 万ドル）',
-    'Real-time & game backends': 'リアルタイム & ゲームバックエンド',
     'Authoritative servers where the clock is the enemy.': '時計が敵になる権威サーバー。',
     'Non-blocking cores with allocation discipline and lock-free hot paths.': 'アロケーション規律とロックフリーなホットパスを備えたノンブロッキングコア。',
     'Matchmaking, room lifecycle, reconnect and state resynchronisation.': 'マッチメイキング、ルームのライフサイクル、再接続と状態の再同期。',
@@ -100,16 +108,10 @@
     'Audit trails, PII boundaries and least-privilege access by design.': '監査証跡、PII の境界、最小権限アクセスを設計段階から。',
     '100K+ TPS credit core · 10K RPS payments API · +20% operational income': '100K+ TPS のクレジット基盤 · 10K RPS の決済 API · 営業収益 +20%',
     'Agentic pipelines & AI integration': 'エージェントパイプライン & AI 統合',
-    'AI that removes work instead of adding a demo.': 'デモを足すのではなく、仕事を減らす AI。',
     'Agentic pipelines that chain tools, retrieval and models into one reliable flow.': 'ツール・検索・モデルをひとつの信頼できる流れにつなぐエージェントパイプライン。',
     'RAG over your real corpus: code, review history, runbooks — with citations.': '実際のコーパスに対する RAG：コード、レビュー履歴、ランブック —— 引用付き。',
     'Guardrails, evaluation sets, cost and latency budgets, sane fallbacks.': 'ガードレール、評価セット、コストとレイテンシの予算、妥当なフォールバック。',
     '50+ engineering hours saved every month with an LLM + RAG review toolkit': 'LLM + RAG のレビューツールで毎月 50 時間以上を削減',
-    'Platform, Kubernetes & DevOps': 'プラットフォーム、Kubernetes & DevOps',
-    'Make the safe path the easy path.': '安全な道を、いちばん楽な道にする。',
-    'Infrastructure as code with Terraform and Helm — reviewable and reproducible.': 'Terraform と Helm による Infrastructure as Code —— レビュー可能で再現性あり。',
-    'GitOps delivery with ArgoCD: progressive rollout, instant rollback.': 'ArgoCD による GitOps デリバリー：段階的ロールアウトと即時ロールバック。',
-    'Kubernetes cost and reliability work, from rightsizing to SLO alerting.': 'Kubernetes のコストと信頼性：適正化から SLO アラートまで。',
     '40%+ cloud cost reduction after rightsizing and decomposition': '適正化と分割によりクラウドコストを 40%+ 削減',
     'Technical leadership & hiring': '技術リーダーシップと採用',
     'Measured by what the team ships when I stop being in the room.': '評価基準は、私がその場にいなくなってもチームが何を出荷できるか。',
@@ -231,7 +233,6 @@
     'Senior/Staff engineer embedded in a team': 'チームに入るシニア / スタッフエンジニア',
     'Architecture review or rescue': 'アーキテクチャレビュー／立て直し',
     'Kafka / streaming platform': 'Kafka / ストリーミング基盤',
-    'Monolith to microservices': 'モノリスからマイクロサービスへ',
     'Agentic pipelines / AI integration': 'エージェントパイプライン / AI 統合',
     'Performance or cloud-cost sprint': 'パフォーマンス／クラウドコストの短期集中',
     'Real-time / game backend': 'リアルタイム / ゲームバックエンド',
@@ -240,6 +241,5 @@
 
     /* --- service row labels --- */
     'what you get': '得られるもの',
-    'proof': '根拠'
   };
 })();

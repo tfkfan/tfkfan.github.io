@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-build="7">
+<html lang="en" data-build="11">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -13,14 +13,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Artem Baltser" />
 <meta property="og:title" content="Artem Baltser — Staff Backend Engineer (Go · Java · Distributed Systems)" />
-<meta property="og:description" content="High-load, event-driven backend engineering. 500K+ msg/sec streaming, 100K+ TPS fintech, 20+ Go microservices, 40%+ cloud cost reduction." />
+<meta property="og:description" content="AI integrations, RAG systems, chat/voice bots, realtime apps and high-load event-driven microservices in Go and Java." />
 <meta property="og:url" content="https://tfkfan.github.io/" />
 <meta property="og:image" content="assets/og-card.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Artem Baltser — Staff Backend Engineer" />
-<meta name="twitter:description" content="High-load, event-driven backend engineering in Go and Java. Open to remote." />
+<meta name="twitter:description" content="AI integrations, RAG, chat/voice bots, realtime apps and high-load microservices in Go and Java. Open to remote." />
 <meta name="twitter:image" content="assets/og-card.png" />
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles/site.css?v=7" />
+<link rel="stylesheet" href="styles/site.css?v=11" />
 
 <script type="application/ld+json">
 {
@@ -42,7 +42,7 @@
   "url": "https://tfkfan.github.io/",
   "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Yaroslavl Demidov State University" },
-  "knowsAbout": ["Go (Golang)","Java","Distributed Systems","Apache Kafka","Apache Flink","Event-Driven Architecture","Kubernetes","Fintech","Real-Time Systems"],
+  "knowsAbout": ["Go (Golang)","Java","Distributed Systems","Apache Kafka","Apache Flink","Event-Driven Architecture","RAG","Model Context Protocol","AI Agents","Realtime Systems","Kubernetes","Fintech"],
   "sameAs": ["https://github.com/tfkfan","https://www.linkedin.com/in/tfkfan"]
 }
 </script>
@@ -81,6 +81,7 @@
 
   <!-- 1 — HERO -->
   <section class="slide" id="s-hero" data-slide="hello" data-cmd="whoami">
+    <canvas class="hero__globe" id="globe" aria-hidden="true"></canvas>
     <div class="wrap">
       <p class="cmd reveal" style="--i:0"><span class="cmd__p">artem@portfolio:~$</span> <span class="cmd__t" data-type="whoami"></span><span class="caret"></span></p>
       <h1 class="hero__name reveal" style="--i:1">ARTEM<br />BALTSER</h1>
@@ -90,6 +91,7 @@
       <div class="cta reveal" style="--i:5" id="hero-cta"></div>
       <div class="scroll-hint reveal" style="--i:6"><span>scroll</span><i class="chev"></i></div>
     </div>
+    <p class="ai-badge" id="ai-badge-hero"><span class="ai-badge__dot"></span><span id="ai-badge">made by AI</span></p>
   </section>
 
   <!-- 2 — NUMBERS -->
@@ -170,7 +172,7 @@
       500K+ messages/sec on Kafka and Flink, 100K+ TPS fintech cores, 20+ microservices, 40%+ cloud cost reduction.
       Delivered for GitLab, Siemens, N26, Delivery Hero and Factorial.</p>
     <p class="lead">This page needs JavaScript for the animated version.
-      The full CV is here: <a href="assets/Artem-Baltser-CV.pdf">Artem-Baltser-CV.pdf</a> ·
+      Get in touch directly:
       <a href="mailto:abaltserdev@outlook.com">abaltserdev@outlook.com</a> ·
       <a href="https://github.com/tfkfan">github.com/tfkfan</a> ·
       <a href="https://www.linkedin.com/in/tfkfan">linkedin.com/in/tfkfan</a></p>
@@ -178,11 +180,13 @@
 </noscript>
 
 <script>document.documentElement.className = 'js';</script>
-<script src="scripts/content.js?v=7"></script>
-<script src="scripts/content-services.js?v=7"></script>
-<script src="scripts/content-rest.js?v=7"></script>
-<script src="scripts/i18n-zh.js?v=7"></script>
-<script src="scripts/i18n-ja.js?v=7"></script>
-<script src="scripts/app.js?v=7"></script>
+<script src="scripts/content.js?v=11"></script>
+<script src="scripts/content-services.js?v=11"></script>
+<script src="scripts/content-rest.js?v=11"></script>
+<script src="scripts/earth-data.js?v=11"></script>
+<script src="scripts/globe.js?v=11"></script>
+<script src="scripts/i18n-zh.js?v=11"></script>
+<script src="scripts/i18n-ja.js?v=11"></script>
+<script src="scripts/app.js?v=11"></script>
 </body>
 </html>

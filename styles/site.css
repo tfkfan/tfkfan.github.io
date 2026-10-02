@@ -261,6 +261,71 @@ img { max-width: 100%; display: block; }
 .chev { width: 8px; height: 8px; border-right: 2px solid var(--w-40); border-bottom: 2px solid var(--w-40); transform: rotate(45deg); animation: bob 1.8s var(--ease) infinite; }
 @keyframes bob { 0%, 100% { transform: rotate(45deg) translate(0, 0); } 50% { transform: rotate(45deg) translate(3px, 3px); } }
 
+/* Hero globe: the Earth spins on the right on desktop, sits behind the copy on
+   small screens so the headline keeps its contrast. */
+#s-hero { overflow: hidden; }
+.hero__globe {
+  position: absolute;
+  right: -1vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(52vw, 780px);
+  height: min(52vw, 780px);
+  pointer-events: none;
+  z-index: 0;
+}
+#s-hero .wrap { position: relative; z-index: 1; }
+
+/* keep the headline clear of the planet on mid-size laptops */
+@media (max-width: 1460px) {
+  .hero__globe { width: min(46vw, 660px); height: min(46vw, 660px); }
+}
+
+@media (max-width: 1080px) {
+  .hero__globe {
+    right: 50%;
+    top: 45%;
+    transform: translate(50%, -50%);
+    width: min(104vw, 620px);
+    height: min(104vw, 620px);
+    opacity: 0.4;
+  }
+}
+@media (max-width: 560px) {
+  .hero__globe { width: 118vw; height: 118vw; opacity: 0.34; }
+}
+
+/* "made by AI" badge — bottom-right corner of the opening slide */
+.ai-badge {
+  position: absolute;
+  right: 22px;
+  bottom: calc(var(--top) + 10px);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--w-40);
+  user-select: none;
+  transition: color .25s var(--ease), border-color .25s var(--ease);
+}
+.ai-badge:hover { color: var(--w-80); border-color: var(--line-strong); }
+.ai-badge__dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, .5);
+  animation: pulse 2.6s var(--ease) infinite;
+}
+@media (max-width: 560px) {
+  .ai-badge { right: 14px; bottom: calc(var(--top) + 6px); font-size: 10px; padding: 4px 9px; }
+}
+
 /* -----------------------------------------------------------------------------
    6. Counters + marquee
    -------------------------------------------------------------------------- */
@@ -525,7 +590,7 @@ html[lang='zh-Hans'] .tl__one, html[lang='ja'] .tl__one { line-height: 1.75; }
 @media print {
   html { scroll-snap-type: none; }
   body { background: #fff; color: #111; font-size: 11pt; }
-  .boot, .topbar, .rail, .toasts, .progress, .scroll-hint, .marquee { display: none !important; }
+  .boot, .topbar, .rail, .toasts, .hero__globe, .progress, .scroll-hint, .marquee { display: none !important; }
   .slide { min-height: 0; padding: 14px 0; page-break-inside: avoid; }
   .js .reveal, .js .reveal-l { opacity: 1 !important; transform: none !important; }
   h1, h2, h3, h4, .row__title, .tl__co, .counter__v { color: #000 !important; }

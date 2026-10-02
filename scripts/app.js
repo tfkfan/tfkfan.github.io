@@ -106,6 +106,10 @@
     $('#skill-filter').placeholder = t(SITE.ui.skillsFilter);
     var hint = $('.scroll-hint span');
     if (hint) hint.textContent = t(SITE.ui.scroll);
+    var badge = $('#ai-badge');
+    if (badge) badge.textContent = t(SITE.ui.aiBadge);
+    var badgeHero = $('#ai-badge-hero');
+    if (badgeHero) badgeHero.setAttribute('aria-label', t(SITE.ui.aiBadge));
   }
 
   function renderLangMenu() {
@@ -183,8 +187,6 @@
         '<div class="row__body"><div class="row__inner">' +
           '<p class="row__label">' + t(SITE.ui.more) + '</p>' +
           '<ul class="bl">' + s.bullets.map(function (b) { return '<li>' + t(b) + '</li>'; }).join('') + '</ul>' +
-          '<p class="row__label">' + t(SITE.ui.proof) + '</p>' +
-          '<p class="row__proof">' + t(s.proof) + '</p>' +
           '<div class="chips">' + s.chips.map(function (c) { return '<span class="chip">' + esc(c) + '</span>'; }).join('') + '</div>' +
         '</div></div>' +
       '</article>';
@@ -329,6 +331,7 @@
     typeCmd(slide, force);
     if (slide.id === 's-hero') startTyping();
     else stopTyping();
+    if (SITE.globe) SITE.globe.setActive(slide.id === 's-hero');
     if (slide.querySelector('.counter')) runCounters(slide);
   }
 
@@ -540,7 +543,10 @@
        do not always fire scroll, so re-check on every lifecycle signal. */
     window.addEventListener('pageshow', function () { trackSlides(); updateProgress(); });
     window.addEventListener('orientationchange', function () { setTimeout(trackSlides, 120); });
-    document.addEventListener('visibilitychange', function () { if (!document.hidden) trackSlides(); });
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) trackSlides();
+      if (SITE.globe) SITE.globe.setActive(!document.hidden && slides[state.index] && slides[state.index].id === 's-hero');
+    });
 
     /* Safety net: some environments swallow scroll events (embedded webviews,
        background tabs, scripted scrolling). A slow poll guarantees a section can
@@ -638,7 +644,9 @@
     bind();
     boot().then(function () {
       renderAll();
+      if (SITE.globe) SITE.globe.mount(document.getElementById('globe'));
       goTo(0);
+      if (SITE.globe) SITE.globe.setActive(true);
     });
   }
 

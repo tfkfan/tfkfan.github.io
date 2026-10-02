@@ -23,7 +23,6 @@ SITE.meta = {
   email: 'abaltserdev@outlook.com',
   github: 'https://github.com/tfkfan',
   linkedin: 'https://www.linkedin.com/in/tfkfan',
-  cv: 'assets/Artem-Baltser-CV.pdf',
   since: 2013,
   location: SITE.T(
     'London, United Kingdom',
@@ -70,19 +69,19 @@ SITE.meta = {
       'Fintech de alta carga · backends em tempo real'
     ),
     SITE.T(
-      'Agentic pipelines · LLM & RAG integration',
-      'Pipelines agénticos · integración LLM y RAG',
-      'Agentische Pipelines · LLM- & RAG-Integration',
-      'Pipelines agentiques · intégration LLM et RAG',
-      'Pipelines agênticos · integração LLM e RAG'
+      'AI integrations · RAG · chat & voice bots',
+      'Integraciones de IA · RAG · bots de chat y voz',
+      'KI-Integrationen · RAG · Chat- & Voice-Bots',
+      'Intégrations IA · RAG · bots chat et voix',
+      'Integrações de IA · RAG · bots de chat e voz'
     )
   ],
   pitch: SITE.T(
-    'I build agentic pipelines, AI integrations, high-load, event-driven backends in Go and Java.',
-    'Construyo pipelines agénticos, integraciones de IA y backends event-driven de alta carga en Go y Java.',
-    'Ich baue agentische Pipelines, KI-Integrationen und hochlastfähige, event-getriebene Backends in Go und Java.',
-    'Je construis des pipelines agentiques, des intégrations IA et des backends événementiels à forte charge en Go et Java.',
-    'Construo pipelines agênticos, integrações de IA e backends orientados a eventos de alta carga em Go e Java.'
+    'I make AI integrations, RAG systems, chat/voice bots, realtime applications, high-load and event-driven microservices in Go and Java.',
+    'Creo integraciones de IA, sistemas RAG, bots de chat y voz, aplicaciones en tiempo real y microservicios event-driven de alta carga en Go y Java.',
+    'Ich baue KI-Integrationen, RAG-Systeme, Chat- und Voice-Bots, Echtzeitanwendungen sowie hochlastfähige, event-getriebene Microservices in Go und Java.',
+    'Je crée des intégrations IA, des systèmes RAG, des bots chat et voix, des applications temps réel et des microservices événementiels à forte charge en Go et Java.',
+    'Crio integrações de IA, sistemas RAG, bots de chat e voz, aplicações em tempo real e microsserviços orientados a eventos de alta carga em Go e Java.'
   ),
   facts: SITE.T(
     '13+ years in production · fintech, cloud platforms, real-time streaming · delivered for GitLab, Siemens, N26, Delivery Hero, Factorial.',
@@ -125,11 +124,11 @@ SITE.ui = {
     'O que faço para os meus clientes.'
   ),
   servicesLead: SITE.T(
-    'Eight ways to plug me into a team. Open any row for the short version of what you get.',
-    'Ocho formas de sumarme a un equipo. Abre cualquier fila para ver el resumen de lo que obtienes.',
-    'Acht Wege, mich in ein Team zu holen. Zeile öffnen für die Kurzfassung.',
-    'Huit façons de m’intégrer à une équipe. Ouvrez une ligne pour le résumé.',
-    'Oito formas de me integrar numa equipa. Abra qualquer linha para ver o resumo.'
+    'Five ways to plug me into a team. Open any row for the short version of what you get.',
+    'Cinco formas de sumarme a un equipo. Abre cualquier fila para ver el resumen de lo que obtienes.',
+    'Fünf Wege, mich in ein Team zu holen. Zeile öffnen für die Kurzfassung.',
+    'Cinq façons de m’intégrer à une équipe. Ouvrez une ligne pour le résumé.',
+    'Cinco formas de me integrar numa equipa. Abra qualquer linha para ver o resumo.'
   ),
 
   expTitle: SITE.T(
@@ -200,13 +199,13 @@ SITE.ui = {
   copyFailed: SITE.T('Copy failed — select it manually', 'No se pudo copiar: selecciónalo manualmente', 'Kopieren fehlgeschlagen — bitte manuell markieren', 'Copie impossible — sélectionnez manuellement', 'Falha ao copiar — selecione manualmente'),
   downloadCv: SITE.T('download CV (PDF)', 'descargar CV (PDF)', 'CV herunterladen (PDF)', 'télécharger le CV (PDF)', 'baixar CV (PDF)'),
   more: SITE.T('what you get', 'lo que obtienes', 'was Sie bekommen', 'ce que vous obtenez', 'o que recebe'),
-  proof: SITE.T('proof', 'prueba', 'Beleg', 'preuve', 'prova'),
+  aiBadge: SITE.T('made by AI', 'hecho con IA', 'mit KI erstellt', 'fait avec l’IA', 'feito com IA'),
 
   topics: [
     SITE.T('Senior/Staff engineer embedded in a team', 'Ingeniero senior/staff integrado en un equipo', 'Senior/Staff Engineer im Team', 'Ingénieur senior/staff intégré à une équipe', 'Engenheiro sênior/staff integrado numa equipa'),
     SITE.T('Architecture review or rescue', 'Revisión o rescate de arquitectura', 'Architektur-Review oder Rettung', 'Audit ou sauvetage d’architecture', 'Revisão ou resgate de arquitetura'),
     SITE.T('Kafka / streaming platform', 'Plataforma Kafka / streaming', 'Kafka-/Streaming-Plattform', 'Plateforme Kafka / streaming', 'Plataforma Kafka / streaming'),
-    SITE.T('Monolith to microservices', 'Monolito a microservicios', 'Monolith zu Microservices', 'Monolithe vers microservices', 'Monolito para microsserviços'),
+    SITE.T('RAG / chat & voice bots', 'RAG / bots de chat y voz', 'RAG / Chat- & Voice-Bots', 'RAG / bots chat et voix', 'RAG / bots de chat e voz'),
     SITE.T('Agentic pipelines / AI integration', 'Pipelines agénticos / integración de IA', 'Agentische Pipelines / KI-Integration', 'Pipelines agentiques / intégration IA', 'Pipelines agênticos / integração de IA'),
     SITE.T('Performance or cloud-cost sprint', 'Sprint de rendimiento o coste cloud', 'Performance- oder Cloud-Cost-Sprint', 'Sprint performance ou coûts cloud', 'Sprint de performance ou custo cloud'),
     SITE.T('Real-time / game backend', 'Backend en tiempo real / juegos', 'Echtzeit-/Game-Backend', 'Backend temps réel / jeux', 'Backend em tempo real / jogos'),

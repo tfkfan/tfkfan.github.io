@@ -16,7 +16,7 @@ scripts/content.js         # identity, UI strings, metrics        (en·es·de·f
 scripts/content-services.js# the eight services and nine roles
 scripts/content-rest.js    # stack and open-source work
 scripts/app.js             # rendering, slide activation, counters, typing
-assets/                    # favicon, social card, CV PDF, project screenshots
+assets/                    # favicon, social card, project screenshots
 tools/og-card.html         # source of assets/og-card.png (re-render with headless Chrome)
 serve.sh                   # local preview helper
 ```
@@ -52,24 +52,59 @@ No build step and no `node_modules`; opening `index.html` from disk also works.
 
 ## Deploy
 
-Any static host — copy `index.html`, `styles/`, `scripts/`, `assets/`,
-`robots.txt`, `sitemap.xml`, `site.webmanifest` (e.g. to a GitHub Pages branch).
-Update the canonical URL and `sitemap.xml` if the domain changes.
+This folder *is* the published repo (`origin` = `tfkfan/tfkfan.github.io`), so
+publishing is a commit and a push:
+
+```bash
+git add -A && git commit -m "updated" && git push
+```
+
+`index.html`, `styles/`, `scripts/`, `assets/`, `robots.txt`, `sitemap.xml` and
+`site.webmanifest` are all that ship. Bump the `?v=` query strings in
+`index.html` and `BUILD` in `scripts/app.js` when you change CSS or JS, or a phone
+will keep running the previous bundle. Update the canonical URL and
+`sitemap.xml` if the domain changes.
 
 ## The seven slides
 
 | # | Prompt | Content |
 | --- | --- | --- |
-| 1 | `whoami` | Name, rotating role, one-line pitch, five CTAs |
+| 1 | `whoami` | Name, rotating role, pitch, CTAs, "made by AI" badge |
 | 2 | `./impact --summary` | Eight animated counters + a company marquee |
-| 3 | `services --list` | Eight services, each expanding to bullets, proof and stack |
+| 3 | `services --list` | Five services, each expanding to bullets and a stack |
 | 4 | `career --timeline` | Nine roles, newest first, each expanding to what changed |
 | 5 | `skills --all` | Six stack groups, live filter, click a technology for where it shipped |
 | 6 | `open --projects` | Orbital, Tanks and asyncapi-generator cards with links |
 | 7 | `contact --now` | Direct channels, brief form that builds an email |
 
+## The spinning Earth
+
+The hero shows a rotating planet drawn on a plain 2D canvas — no WebGL, no
+library, no texture download:
+
+* **Real coastlines, at 1° resolution.** `earth-data.js` is Natural Earth 110m
+  land (public domain) rasterised to a 360 x 180 grid and packed one bit per
+  cell: 8.1 KB of data, 10.8 KB base64, **21 538 land points**.
+* **Orientation.** Orthographic projection with a 16° axial tilt (northern
+  hemisphere towards the viewer) and a **22° roll, so the axis leans to the
+  right**. `SITE.globe.project(lat, lon)` returns where any coordinate lands on
+  the canvas, which is how that geometry is asserted in tests.
+* **Look.** Soft anti-aliased land dots drawn from a pre-rendered sprite, a lit
+  ocean sphere, an atmosphere halo, a terminator shading the night side, a
+  graticule, a 150-star field, and pulsing markers on London, Berlin and
+  Barcelona — the cities where the work happened.
+* **Budget.** 60 fps target, device pixel ratio capped at 2, and a **stride that
+  adapts to the measured frame cost** (21 500 points at full density on a large
+  screen, every third point on a phone), so it degrades instead of stuttering.
+  The loop **stops** whenever the hero is off screen or the tab is hidden, draws
+  a single static frame under `prefers-reduced-motion`, and is hidden in print.
+
+Regenerate the mask from the source data with `tools/make-earth-mask.py 1`.
+
 ## Interactivity
 
+* **"made by AI" badge** in the bottom-right corner of the opening slide, in all
+  seven languages.
 * **Language menu** in the top bar: five languages, detected from the browser on
   first visit and stored in `localStorage`; the whole deck re-renders instantly.
 * **Slides** snap on scroll, activate with staggered slide-in animations, and

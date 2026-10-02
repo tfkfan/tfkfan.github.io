@@ -7,6 +7,20 @@
 (function () {
   SITE.i18n = SITE.i18n || {};
   SITE.i18n.zh = {
+    'Five ways to plug me into a team. Open any row for the short version of what you get.': '五种加入团队的方式。展开任意一行，查看你能得到什么。',
+    'Apache Kafka, Apache Flink, Data & Streaming platforms': 'Apache Kafka、Apache Flink、数据与流处理平台',
+
+    'AI that removes work instead of adding a demo.': '真正减少工作量的 AI，而不是又一个演示。',
+
+    'I make AI integrations, RAG systems, chat/voice bots, realtime applications, high-load and event-driven microservices in Go and Java.': '我用 Go 和 Java 构建 AI 集成、RAG 系统、聊天与语音机器人、实时应用，以及高负载事件驱动微服务。',
+    'AI integrations · RAG · chat & voice bots': 'AI 集成 · RAG · 聊天与语音机器人',
+    'made by AI': '由 AI 制作',
+    'Realtime, games, multiplayers': '实时、游戏、多人联机',
+    'Kubernetes-native platforms with the Strimzi operator: declarative Kafka clusters, rolling upgrades, GitOps-managed topics.': '基于 Kubernetes 原生平台与 Strimzi Operator：声明式 Kafka 集群、滚动升级、用 GitOps 管理 Topic。',
+    'Agent harnesses and MCP servers that expose your tools and data to models safely.': 'Agent 框架与 MCP 服务器：把您的工具和数据安全地开放给模型。',
+    'RAG / chat & voice bots': 'RAG / 聊天与语音机器人',
+    'Model Context Protocol servers that expose tools and data to agents.': 'MCP（Model Context Protocol）服务器：把工具与数据开放给 Agent。',
+
 
     /* --- header, buttons, misc UI --- */
     'open to remote · US, EU work permit': '接受远程 · 美国、欧盟工作许可',
@@ -36,15 +50,12 @@
     'Go (Golang) · Java · Distributed Systems': 'Go (Golang) · Java · 分布式系统',
     'Kafka · Flink · Event-driven architecture': 'Kafka · Flink · 事件驱动架构',
     'High-load fintech · real-time backends': '高负载金融科技 · 实时后端',
-    'Agentic pipelines · LLM & RAG integration': '智能体流水线 · LLM 与 RAG 集成',
-    'I build agentic pipelines, AI integrations, high-load, event-driven backends in Go and Java.': '我构建智能体流水线、AI 集成，以及基于 Go 和 Java 的高负载事件驱动后端。',
     '13+ years in production · fintech, cloud platforms, real-time streaming · delivered for GitLab, Siemens, N26, Delivery Hero, Factorial.': '13 年以上生产环境经验 · 金融科技、云平台、实时流处理 · 服务过 GitLab、Siemens、N26、Delivery Hero、Factorial。',
 
     /* --- section titles and leads --- */
     'Numbers I can defend.': '我敢为之负责的数字。',
     'Delivered for': '服务过的公司',
     'What I do for clients.': '我能为客户做什么。',
-    'Eight ways to plug me into a team. Open any row for the short version of what you get.': '八种加入团队的方式。展开任意一行，查看你能得到什么。',
     'Thirteen years, in order.': '十三年，按时间排列。',
     'Newest first. Open an entry for what actually changed.': '由近及远。展开任意一条，查看真正改变了什么。',
     'Stack, with receipts.': '技术栈，附带证据。',
@@ -75,19 +86,16 @@
     'Performance work on the hot path: pprof, allocation budgets, connection pooling.': '热路径性能优化：pprof、分配预算、连接池。',
     'Observability and tests by default — metrics, traces, load tests in CI.': '默认具备可观测性与测试：指标、链路追踪、CI 中的压力测试。',
     '10K RPS payments backend · captcha service built from scratch in 7 months': '10K RPS 支付后端 · 7 个月从零构建的验证码服务',
-    'Kafka & Flink streaming': 'Kafka 与 Flink 流处理',
     'Event-driven platforms at half a million messages per second.': '每秒五十万条消息的事件驱动平台。',
     'Cluster and topic design: partitioning, retention, ordering, capacity model.': '集群与 Topic 设计：分区、保留策略、顺序保证与容量模型。',
     'CDC with Debezium so you stream from systems you will never rewrite.': '用 Debezium 做 CDC，从永不重写的系统里拉取数据流。',
     'Flink jobs with checkpointing, schema governance and honest delivery guarantees.': '带 checkpoint、schema 治理与诚实投递语义的 Flink 作业。',
     '500K+ msg/sec platform delivered in 8 months · −15% dispatch cost': '8 个月交付 500K+ 条/秒平台 · 调度成本 −15%',
-    'Monolith to microservices': '单体到微服务',
     'Decomposition in reversible steps, not a big-bang rewrite.': '以可回退的步骤做拆分，而不是一次性重写。',
     'Cost and coupling model first: what to split, what to leave alone, and why.': '先做成本与耦合分析：拆什么、不拆什么，以及为什么。',
     'Strangler-fig migration with dual writes, shadow traffic and feature flags.': '绞杀者模式迁移：双写、影子流量与功能开关。',
     'Runtime rightsizing and deletion of the old path — otherwise it never dies.': '运行时资源调优并删除旧路径 —— 否则它永远不会消失。',
     '20+ Go microservices · 40%+ cloud cost cut (≈ $500K/year)': '20+ 个 Go 微服务 · 云成本降低 40%+（约 50 万美元/年）',
-    'Real-time & game backends': '实时与游戏后端',
     'Authoritative servers where the clock is the enemy.': '以时间为敌的权威服务器。',
     'Non-blocking cores with allocation discipline and lock-free hot paths.': '非阻塞内核：严格的分配纪律与无锁热路径。',
     'Matchmaking, room lifecycle, reconnect and state resynchronisation.': '匹配、房间生命周期、断线重连与状态重同步。',
@@ -100,16 +108,10 @@
     'Audit trails, PII boundaries and least-privilege access by design.': '默认具备审计追溯、PII 边界与最小权限访问。',
     '100K+ TPS credit core · 10K RPS payments API · +20% operational income': '100K+ TPS 信贷核心 · 10K RPS 支付 API · 运营收入 +20%',
     'Agentic pipelines & AI integration': '智能体流水线与 AI 集成',
-    'AI that removes work instead of adding a demo.': '真正减少工作量的 AI，而不是又一个演示。',
     'Agentic pipelines that chain tools, retrieval and models into one reliable flow.': '把工具、检索与模型串联成一条可靠流程的智能体流水线。',
     'RAG over your real corpus: code, review history, runbooks — with citations.': '基于你真实语料的 RAG：代码、评审历史、运维手册，并附引用。',
     'Guardrails, evaluation sets, cost and latency budgets, sane fallbacks.': '护栏、评测集、成本与延迟预算，以及合理的降级方案。',
     '50+ engineering hours saved every month with an LLM + RAG review toolkit': '借助 LLM + RAG 评审工具，每月节省 50+ 工程师小时',
-    'Platform, Kubernetes & DevOps': '平台、Kubernetes 与 DevOps',
-    'Make the safe path the easy path.': '让安全的做法成为最省事的做法。',
-    'Infrastructure as code with Terraform and Helm — reviewable and reproducible.': '使用 Terraform 与 Helm 的基础设施即代码 —— 可评审、可复现。',
-    'GitOps delivery with ArgoCD: progressive rollout, instant rollback.': '基于 ArgoCD 的 GitOps 交付：渐进式发布、即时回滚。',
-    'Kubernetes cost and reliability work, from rightsizing to SLO alerting.': 'Kubernetes 成本与可靠性治理：从资源调优到 SLO 告警。',
     '40%+ cloud cost reduction after rightsizing and decomposition': '经过资源调优与拆分后云成本降低 40%+',
     'Technical leadership & hiring': '技术领导力与招聘',
     'Measured by what the team ships when I stop being in the room.': '衡量标准是：我不在场时，团队能交付什么。',
@@ -231,7 +233,6 @@
     'Senior/Staff engineer embedded in a team': '加入团队的高级 / Staff 工程师',
     'Architecture review or rescue': '架构评审或救火',
     'Kafka / streaming platform': 'Kafka / 流处理平台',
-    'Monolith to microservices': '单体到微服务',
     'Agentic pipelines / AI integration': '智能体流水线 / AI 集成',
     'Performance or cloud-cost sprint': '性能或云成本专项',
     'Real-time / game backend': '实时 / 游戏后端',
@@ -240,6 +241,5 @@
 
     /* --- service row labels --- */
     'what you get': '你能得到什么',
-    'proof': '证据'
   };
 })();
