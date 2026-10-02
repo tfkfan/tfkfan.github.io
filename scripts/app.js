@@ -291,16 +291,46 @@
 
   /* ---------------------------------------------------------------------------
      Motion: reveals, typed commands, counters
+
+     Two separate states on purpose:
+       revealed  — the slide has been on screen at least once (never removed, so
+                   content can never disappear while it is still visible)
+       current   — the slide the reader is on right now (rail, typing, counters)
      ------------------------------------------------------------------------ */
+  var revealed = {};
+
+  function reveal(slide) {
+    var i = slides.indexOf(slide);
+    if (i === -1 || revealed[i]) return;
+    revealed[i] = true;
+    slide.classList.add('is-active');
+  }
+
   function activate(slide, force) {
     var idx = slides.indexOf(slide);
     if (idx === -1) return;
+    reveal(slide);
     if (!force && idx === state.index) return;
     state.index = idx;
-    slides.forEach(function (s) { s.classList.toggle('is-active', s === slide); });
     $$('.rail__item').forEach(function (b, i) { b.classList.toggle('is-active', i === idx); });
     typeCmd(slide, force);
     if (slide.querySelector('.counter')) runCounters(slide);
+  }
+
+  /* Which slide is the reader on? The last one whose top has passed the reading
+     line. This works for any slide height — including sections far taller than
+     the phone viewport, where a percentage threshold would never be reached. */
+  function trackSlides() {
+    if (!slides.length) return;
+    var vh = window.innerHeight;
+    var line = vh * 0.35;
+    var current = slides[0];
+    slides.forEach(function (s) {
+      var r = s.getBoundingClientRect();
+      if (r.top < vh * 0.85 && r.bottom > vh * 0.15) reveal(s);
+      if (r.top <= line) current = s;
+    });
+    if (current !== slides[state.index]) activate(current);
   }
 
   function typeCmd(slide, force) {
@@ -344,20 +374,11 @@
     });
   }
 
-  var observer = null;
   function reobserve() {
-    if (observer) observer.disconnect();
-    if (!('IntersectionObserver' in window)) {
-      /* no observer: show everything rather than nothing */
-      slides.forEach(function (s) { s.classList.add('is-active'); });
-      return;
-    }
-    observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) activate(entry.target);
-      });
-    }, { threshold: 0.28, rootMargin: '-10% 0px -24% 0px' });
-    slides.forEach(function (s) { observer.observe(s); });
+    /* Re-apply what has already been revealed (used after a language switch),
+       then let the scroll tracker take over. */
+    slides.forEach(function (s, i) { if (revealed[i]) s.classList.add('is-active'); });
+    trackSlides();
   }
 
   /* ---------------------------------------------------------------------------
@@ -448,16 +469,35 @@
       else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
     });
 
+    /* Scroll is throttled with a timer rather than rAF: it coalesces bursts the
+       same way but still runs when animation frames are throttled (background
+       tabs, battery savers, headless), so a section can never stay hidden. */
     var ticking = false;
     window.addEventListener('scroll', function () {
       if (ticking) return;
       ticking = true;
-      requestAnimationFrame(function () {
-        var h = document.documentElement.scrollHeight - window.innerHeight;
-        $('#progress-bar').style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      setTimeout(function () {
         ticking = false;
-      });
+        trackSlides();
+        updateProgress();
+      }, 16);
     }, { passive: true });
+
+    window.addEventListener('resize', function () { trackSlides(); updateProgress(); });
+
+    /* Safety net: some environments swallow scroll events (embedded webviews,
+       background tabs, scripted scrolling). A slow poll guarantees a section can
+       never stay invisible — seven rectangle reads twice a second is nothing. */
+    setInterval(function () {
+      if (!document.hidden) trackSlides();
+    }, 350);
+  }
+
+  function updateProgress() {
+    var bar = $('#progress-bar');
+    if (!bar) return;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
   }
 
   function updateSkillCount() {

@@ -76,6 +76,23 @@ Update the canonical URL and `sitemap.xml` if the domain changes.
   lazy-load; the whole site is under 250 KB excluding images and the CV.
 * Without JavaScript a `<noscript>` summary with the CV link and contact details is still shown.
 
+## How the reveal works (worth knowing before editing)
+
+Each section carries two independent states:
+
+* `is-active` — the section has been on screen at least once. It is **never
+  removed**, so content cannot vanish while it is still visible (a tall section
+  spans two or three phone screens; a threshold-based reveal used to hide it as
+  soon as the next section peeked in — the "long black screen" bug).
+* rail highlight / typing / counters follow the *current* section only, computed
+  by `trackSlides()` from the section that has passed the reading line at 35% of
+  the viewport height. That works for any section height, unlike a percentage
+  visibility threshold.
+
+`trackSlides()` runs on scroll (throttled with a timer, not rAF, so it still
+fires when animation frames are throttled), on resize, and on a 350 ms poll as a
+safety net for environments that swallow scroll events.
+
 ## Suggested next steps
 
 1. **Photo** — drop a portrait in `assets/` and it can go next to the name.
