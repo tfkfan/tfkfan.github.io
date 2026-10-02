@@ -4,12 +4,24 @@
    ========================================================================== */
 
 (function () {
-  var t = function (v) { return v == null ? '' : (typeof v === 'string' ? v : (v[SITE.lang] || v.en)); };
+  var t = function (v) {
+    if (v == null) return '';
+    if (typeof v === 'string') return v;
+    if (v[SITE.lang]) return v[SITE.lang];
+    /* zh/ja live in overlay dictionaries keyed by the English source string */
+    var overlay = SITE.i18n && SITE.i18n[SITE.lang];
+    if (overlay && v.en && overlay[v.en]) return overlay[v.en];
+    return v.en || '';
+  };
   var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
   var attr = function (s) { return esc(s).replace(/"/g, '&quot;'); };
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var reduced = function () { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; };
+
+  /* Bump alongside the ?v= query strings in index.html so a phone can never
+     keep running a stale build from its cache. */
+  var BUILD = 7;
 
   var LANG_KEY = 'artem-lang';
   var state = { lang: 'en', index: -1, typed: {} };
@@ -73,7 +85,7 @@
      Renderers
      ------------------------------------------------------------------------ */
   function renderChrome() {
-    document.documentElement.lang = state.lang;
+    document.documentElement.lang = state.lang === 'zh' ? 'zh-Hans' : state.lang;
     $('#avail-text').textContent = t(SITE.ui.avail);
     $('#btn-lang').innerHTML = langShort(state.lang) + ' <i class="caret-d"></i>';
     $('#btn-lang').setAttribute('title', t(SITE.ui.langLabel));
@@ -110,7 +122,7 @@
     if (!SITE.langs.some(function (l) { return l.id === id; })) return false;
     state.lang = id;
     SITE.lang = id;
-    document.documentElement.lang = id;
+    document.documentElement.lang = id === 'zh' ? 'zh-Hans' : id;
     try { localStorage.setItem(LANG_KEY, id); } catch (e) { /* ignore */ }
     closeLangMenu();
     renderAll();
@@ -218,7 +230,7 @@
   function renderWork() {
     $('#work-grid').innerHTML = SITE.work.map(function (w, i) {
       return '<article class="wcard reveal" style="--i:' + (2 + i) + '">' +
-        (w.img ? '<div class="wcard__shot"><img src="' + w.img + '" alt="' + esc(w.title) + '" loading="lazy" decoding="async" /></div>' : '<div class="wcard__shot wcard__shot--code"><span class="wcard__prompt">$</span><span>vert.x · netty · rooms · matchmaking</span></div>') +
+        (w.img ? '<div class="wcard__shot"><img src="' + w.img + '" alt="' + esc(w.title) + '" loading="lazy" decoding="async" /></div>' : '<div class="wcard__shot wcard__shot--code"><span class="wcard__prompt">$</span><span>' + esc(w.meta) + '</span></div>') +
         '<h3 class="wcard__title">' + esc(w.title) + '</h3>' +
         '<p class="wcard__desc">' + t(w.desc) + '</p>' +
         '<p class="wcard__meta">' + esc(w.meta) + '</p>' +
@@ -285,6 +297,7 @@
     renderContact();
     renderRail();
     state.typed = {};
+    if (slides[state.index >= 0 ? state.index : 0].id === 's-hero') startTyping();
     reobserve();
     activate(slides[state.index >= 0 ? state.index : 0], true);
   }
@@ -314,14 +327,18 @@
     state.index = idx;
     $$('.rail__item').forEach(function (b, i) { b.classList.toggle('is-active', i === idx); });
     typeCmd(slide, force);
+    if (slide.id === 's-hero') startTyping();
+    else stopTyping();
     if (slide.querySelector('.counter')) runCounters(slide);
   }
 
   /* Which slide is the reader on? The last one whose top has passed the reading
      line. This works for any slide height — including sections far taller than
      the phone viewport, where a percentage threshold would never be reached. */
+  var trackRuns = 0;
   function trackSlides() {
     if (!slides.length) return;
+    trackRuns++;
     var vh = window.innerHeight;
     var line = vh * 0.35;
     var current = slides[0];
@@ -331,6 +348,10 @@
       if (r.top <= line) current = s;
     });
     if (current !== slides[state.index]) activate(current);
+  }
+
+  function revealAll() {
+    slides.forEach(function (s) { revealed[slides.indexOf(s)] = true; s.classList.add('is-active'); });
   }
 
   function typeCmd(slide, force) {
@@ -347,6 +368,32 @@
       if (!slide.classList.contains('is-active')) return;
       el.textContent = text.slice(0, ++i);
       if (i < text.length) setTimeout(tick, 34 + Math.random() * 26);
+    })();
+  }
+
+  /* Hero role line: cycles through the typed phrases, restarts per language. */
+  var typingTimer = null;
+
+  function stopTyping() {
+    if (typingTimer) { clearTimeout(typingTimer); typingTimer = null; }
+  }
+
+  function startTyping() {
+    var target = document.getElementById('typed');
+    if (!target) return;
+    stopTyping();
+    var phrases = SITE.meta.typed.map(t).filter(Boolean);
+    if (!phrases.length) return;
+    if (reduced()) { target.textContent = phrases[0]; return; }
+    var pi = 0, ci = 0, deleting = false;
+    (function tick() {
+      var phrase = phrases[pi % phrases.length];
+      ci += deleting ? -1 : 1;
+      target.textContent = phrase.slice(0, ci);
+      var delay = deleting ? 22 : 44;
+      if (!deleting && ci >= phrase.length) { deleting = true; delay = 2300; }
+      else if (deleting && ci <= 0) { deleting = false; pi++; delay = 320; }
+      typingTimer = setTimeout(tick, delay);
     })();
   }
 
@@ -469,11 +516,11 @@
       else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
     });
 
-    /* Scroll is throttled with a timer rather than rAF: it coalesces bursts the
-       same way but still runs when animation frames are throttled (background
-       tabs, battery savers, headless), so a section can never stay hidden. */
+    /* Timer-throttled rather than rAF (which is frozen in background tabs), and
+       fed by every kind of scrolling: phones throttle `scroll` during momentum
+       scrolling, but touch and wheel events keep arriving. */
     var ticking = false;
-    window.addEventListener('scroll', function () {
+    function scheduleTrack() {
       if (ticking) return;
       ticking = true;
       setTimeout(function () {
@@ -481,9 +528,19 @@
         trackSlides();
         updateProgress();
       }, 16);
-    }, { passive: true });
+    }
+    window.addEventListener('scroll', scheduleTrack, { passive: true });
+    window.addEventListener('touchmove', scheduleTrack, { passive: true });
+    window.addEventListener('touchstart', scheduleTrack, { passive: true });
+    window.addEventListener('wheel', scheduleTrack, { passive: true });
 
     window.addEventListener('resize', function () { trackSlides(); updateProgress(); });
+
+    /* Phones: returning from the back-forward cache, switching apps and rotating
+       do not always fire scroll, so re-check on every lifecycle signal. */
+    window.addEventListener('pageshow', function () { trackSlides(); updateProgress(); });
+    window.addEventListener('orientationchange', function () { setTimeout(trackSlides, 120); });
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) trackSlides(); });
 
     /* Safety net: some environments swallow scroll events (embedded webviews,
        background tabs, scripted scrolling). A slow poll guarantees a section can
@@ -491,6 +548,17 @@
     setInterval(function () {
       if (!document.hidden) trackSlides();
     }, 350);
+
+    /* Last line of defence: if anything at all throws, or if the tracker never
+       managed to run, show the whole page rather than leaving content hidden. */
+    function failSafe() {
+      var b = $('#boot');
+      if (b) { b.classList.add('is-out'); b.hidden = true; }
+      revealAll();
+    }
+    window.addEventListener('error', failSafe);
+    window.addEventListener('unhandledrejection', failSafe);
+    setTimeout(function () { if (!trackRuns) failSafe(); }, 3000);
   }
 
   function updateProgress() {
@@ -534,6 +602,7 @@
     var overlay = $('#boot');
     var log = $('#boot-log');
     var lines = SITE.ui.boot.map(function (l, i, arr) { return [t(l), i === arr.length - 1 ? 'ac' : 'ok']; });
+    if (lines[2]) lines[2][0] += ' · build ' + BUILD;
 
     if (reduced() || !overlay) { if (overlay) overlay.hidden = true; return Promise.resolve(); }
 
@@ -562,9 +631,10 @@
      Init
      ------------------------------------------------------------------------ */
   function init() {
+    window.PORTFOLIO_BUILD = BUILD;
     state.lang = resolveLang();
     SITE.lang = state.lang;
-    document.documentElement.lang = state.lang;
+    document.documentElement.lang = state.lang === 'zh' ? 'zh-Hans' : state.lang;
     bind();
     boot().then(function () {
       renderAll();

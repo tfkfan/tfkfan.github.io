@@ -13,7 +13,9 @@ SITE.langs = [
   { id: 'es', label: 'Español', short: 'ES' },
   { id: 'de', label: 'Deutsch', short: 'DE' },
   { id: 'fr', label: 'Français', short: 'FR' },
-  { id: 'pt', label: 'Português', short: 'PT' }
+  { id: 'pt', label: 'Português', short: 'PT' },
+  { id: 'zh', label: '中文（简体）', short: 'ZH' },
+  { id: 'ja', label: '日本語', short: 'JA' }
 ];
 
 SITE.meta = {
@@ -220,18 +222,18 @@ SITE.ui = {
   ),
 
   foot: SITE.T(
-    'Built as a single page of vanilla JavaScript — no frameworks, no trackers. Full CV in PDF, or ask me anything in the command bar below.',
-    'Hecho como una sola página en JavaScript puro: sin frameworks ni rastreadores. CV completo en PDF o pregúntame lo que quieras en la barra de comandos.',
-    'Eine einzige Seite in reinem JavaScript — keine Frameworks, kein Tracking. Vollständiger Lebenslauf als PDF, oder fragen Sie mich in der Kommandozeile unten.',
-    'Une seule page en JavaScript pur — sans framework ni traqueur. CV complet en PDF, ou posez vos questions dans la barre de commandes.',
-    'Uma única página em JavaScript puro — sem frameworks nem rastreadores. CV completo em PDF, ou pergunte o que quiser na barra de comandos.'
+    'Built as a single page of vanilla JavaScript — no frameworks, no trackers. Full CV in PDF, or just send an email.',
+    'Hecho como una sola página en JavaScript puro: sin frameworks ni rastreadores. CV completo en PDF, o simplemente escríbeme un email.',
+    'Eine einzige Seite in reinem JavaScript — keine Frameworks, kein Tracking. Vollständiger Lebenslauf als PDF, oder schreiben Sie einfach eine E-Mail.',
+    'Une seule page en JavaScript pur — sans framework ni traqueur. CV complet en PDF, ou écrivez-moi simplement un e-mail.',
+    'Uma única página em JavaScript puro — sem frameworks nem rastreadores. CV completo em PDF, ou envie simplesmente um e-mail.'
   ),
 
 
   boot: [
     SITE.T('mount /home/artem/portfolio', 'montando /home/artem/portfolio', 'mounte /home/artem/portfolio', 'montage /home/artem/portfolio', 'montando /home/artem/portfolio'),
     SITE.T('load profile — staff backend engineer', 'cargando perfil — ingeniero backend staff', 'Profil laden — Staff Backend Engineer', 'chargement du profil — ingénieur backend staff', 'carregando perfil — engenheiro backend staff'),
-    SITE.T('index 7 sections · 5 languages', 'indexando 7 secciones · 5 idiomas', 'indexiere 7 Abschnitte · 5 Sprachen', 'indexation de 7 sections · 5 langues', 'indexando 7 secções · 5 idiomas'),
+    SITE.T('index 7 sections · 7 languages', 'indexando 7 secciones · 7 idiomas', 'indexiere 7 Abschnitte · 7 Sprachen', 'indexation de 7 sections · 7 langues', 'indexando 7 secções · 7 idiomas'),
     SITE.T('link metrics — 500K+ msg/s · 100K+ TPS · 10K RPS', 'conectando métricas — 500K+ msg/s · 100K+ TPS · 10K RPS', 'Metriken verbinden — 500K+ msg/s · 100K+ TPS · 10K RPS', 'connexion des métriques — 500K+ msg/s · 100K+ TPS · 10K RPS', 'ligando métricas — 500K+ msg/s · 100K+ TPS · 10K RPS'),
     SITE.T('ready. scroll to explore.', 'listo. desplázate para explorar.', 'bereit. Scrollen zum Erkunden.', 'prêt. faites défiler pour explorer.', 'pronto. role para explorar.')
   ]

@@ -243,6 +243,20 @@
       img: 'assets/preview-tanks-1.webp',
       links: []
     }
+    ,
+    {
+      title: 'asyncapi-generator',
+      desc: T('Contributor to evryfs/asyncapi-generator — the Kotlin AsyncAPI code generator that turns message-driven API contracts into servers and clients.',
+        'Colaborador de evryfs/asyncapi-generator, el generador de código AsyncAPI en Kotlin que convierte contratos de API basados en mensajes en servidores y clientes.',
+        'Mitwirkender an evryfs/asyncapi-generator — dem Kotlin-AsyncAPI-Codegenerator, der nachrichtenbasierte API-Verträge in Server und Clients übersetzt.',
+        'Contributeur à evryfs/asyncapi-generator, le générateur de code AsyncAPI en Kotlin qui transforme les contrats d’API orientés messages en serveurs et clients.',
+        'Colaborador do evryfs/asyncapi-generator, o gerador de código AsyncAPI em Kotlin que transforma contratos de API baseados em mensagens em servidores e clientes.'),
+      meta: 'Kotlin · AsyncAPI · Apache-2.0',
+      img: null,
+      links: [
+        { t: 'GitHub', href: 'https://github.com/evryfs/asyncapi-generator' }
+      ]
+    }
   ];
 
 })();

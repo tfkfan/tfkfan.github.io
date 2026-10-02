@@ -7,8 +7,10 @@
    1. Tokens
    -------------------------------------------------------------------------- */
 :root {
-  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --cjk: 'PingFang SC', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans CJK SC', 'Noto Sans SC',
+         'Microsoft YaHei', 'Yu Gothic', Meiryo, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, var(--cjk), monospace;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, var(--cjk), sans-serif;
 
   --bg: #000000;
   --bg-soft: #06070a;
@@ -115,8 +117,7 @@ img { max-width: 100%; display: block; }
   position: fixed; top: 0; left: 0; right: 0; height: var(--top); z-index: 110;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 0 18px;
-  background: rgba(0, 0, 0, 0.72);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.94);
   border-bottom: 1px solid var(--line);
   font-family: var(--mono); font-size: 12.5px;
 }
@@ -201,7 +202,6 @@ img { max-width: 100%; display: block; }
   transform: translateY(26px);
   transition: opacity .65s var(--ease), transform .65s var(--ease);
   transition-delay: calc(var(--i, 0) * 55ms);
-  will-change: opacity, transform;
 }
 .js .reveal-l { transform: translateX(-30px); }
 .slide.is-active .reveal, .slide.is-active .reveal-l { opacity: 1; transform: none; }
@@ -475,6 +475,8 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 860px) {
   :root { --top: 52px; }
+  /* no snapping on phones: sections here are 2-3 screens tall */
+  html { scroll-snap-type: none; }
   body { font-size: 16px; }
   .slide { padding-left: 18px; padding-right: 18px; }
   .brand__sub { display: none; }
@@ -505,7 +507,20 @@ img { max-width: 100%; display: block; }
 }
 
 /* -----------------------------------------------------------------------------
-   14. Print — everything open, light, readable
+   14. Chinese / Japanese typography
+   -------------------------------------------------------------------------- */
+html[lang='zh-Hans'] body, html[lang='ja'] body { line-height: 1.75; }
+html[lang='zh-Hans'] .h2, html[lang='ja'] .h2 { letter-spacing: 0; line-height: 1.2; }
+html[lang='zh-Hans'] .hero__name, html[lang='ja'] .hero__name { letter-spacing: -0.01em; }
+html[lang='zh-Hans'] .lead, html[lang='ja'] .lead,
+html[lang='zh-Hans'] .bl li, html[lang='ja'] .bl li { line-height: 1.9; }
+html[lang='zh-Hans'] .btn, html[lang='ja'] .btn,
+html[lang='zh-Hans'] .chip, html[lang='ja'] .chip { letter-spacing: 0.02em; }
+html[lang='zh-Hans'] .row__one, html[lang='ja'] .row__one,
+html[lang='zh-Hans'] .tl__one, html[lang='ja'] .tl__one { line-height: 1.75; }
+
+/* -----------------------------------------------------------------------------
+   15. Print — everything open, light, readable
    -------------------------------------------------------------------------- */
 @media print {
   html { scroll-snap-type: none; }

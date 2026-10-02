@@ -21,9 +21,26 @@ tools/og-card.html         # source of assets/og-card.png (re-render with headle
 serve.sh                   # local preview helper
 ```
 
-Every translatable string is one object built by `SITE.T(en, es, de, fr, pt)`, so a
-new language is a matter of adding a sixth argument in those three content files
-plus an entry in `SITE.langs`.
+### Adding a language
+
+Two ways, both cheap:
+
+* **Latin-script languages** — add an argument to `SITE.T(en, es, de, fr, pt, …)`
+  and an entry in `SITE.langs`. German, Spanish, French and Portuguese work this way.
+* **Anything else** — drop in an overlay file like `scripts/i18n-zh.js`: a plain
+  object keyed by the **English source string**, registered as
+  `SITE.i18n.<code>`. The lookup in `t()` checks the language slot first, then the
+  overlay, then falls back to English, so a missing entry degrades to English
+  instead of rendering an empty element. Chinese and Japanese work this way, which
+  is why they needed no changes to the 219 existing strings.
+
+A quick coverage check (should list only language-neutral strings such as date
+ranges):
+
+```js
+// in the console, after the page loads
+Object.keys(SITE.i18n.zh).length   // translated entries
+```
 
 ## Run it
 
@@ -48,7 +65,7 @@ Update the canonical URL and `sitemap.xml` if the domain changes.
 | 3 | `services --list` | Eight services, each expanding to bullets, proof and stack |
 | 4 | `career --timeline` | Nine roles, newest first, each expanding to what changed |
 | 5 | `skills --all` | Six stack groups, live filter, click a technology for where it shipped |
-| 6 | `open --projects` | Orbital and Tanks cards with links |
+| 6 | `open --projects` | Orbital, Tanks and asyncapi-generator cards with links |
 | 7 | `contact --now` | Direct channels, brief form that builds an email |
 
 ## Interactivity
@@ -75,6 +92,30 @@ Update the canonical URL and `sitemap.xml` if the domain changes.
 * No frameworks and no webfont blocking; screenshots are pre-optimised WebP and
   lazy-load; the whole site is under 250 KB excluding images and the CV.
 * Without JavaScript a `<noscript>` summary with the CV link and contact details is still shown.
+
+## Mobile hardening (why the code looks paranoid)
+
+* **No `will-change`** on reveal elements. Wrapping 46 elements in their own GPU
+  layer exhausts layer memory on phones, which shows up as unpainted (black)
+  regions that never reproduce on a desktop or in a headless test.
+* **No `backdrop-filter`** on the fixed top bar — blur + `position: fixed` over a
+  very long page is a known iOS Safari paint bug; on black it looks identical.
+* **No scroll snapping below 860 px**: sections are two to three screens tall on
+  a phone, where snapping is quirky on both iOS and Android.
+* **Tracking listens to `scroll`, `touchstart`, `touchmove` and `wheel`** (phones
+  throttle `scroll` during momentum scrolling), plus `resize`, `pageshow`
+  (back-forward cache), `orientationchange` and `visibilitychange`, plus a 350 ms
+  poll.
+* **Two fail-safes**: any uncaught error reveals the whole page and force-hides
+  the boot overlay; and if the tracker never ran at all after 3 s, everything is
+  revealed too. Content can never stay invisible.
+* **Cache busting**: `index.html` requests every asset with `?v=N`, and `<html
+  data-build="N">` plus `window.PORTFOLIO_BUILD` identify the running build.
+  Bump both when you deploy, or a phone will happily keep running the old bundle.
+
+Sections carry two independent states: `is-active` (has been on screen — never
+removed) and the rail/typing/counters, which follow `trackSlides()`'s idea of the
+current section (the last one whose top passed 35 % of the viewport).
 
 ## How the reveal works (worth knowing before editing)
 
