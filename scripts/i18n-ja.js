@@ -98,7 +98,7 @@
     'Strangler-fig migration with dual writes, shadow traffic and feature flags.': 'ストラングラーフィグ移行：二重書き込み、シャドウトラフィック、フィーチャーフラグ。',
     'Runtime rightsizing and deletion of the old path — otherwise it never dies.': 'ランタイムの適正化と古い経路の削除 —— さもないと永遠に残ります。',
     '20+ Go microservices · 40%+ cloud cost cut (≈ $500K/year)': 'Go マイクロサービス 20 以上 · クラウドコスト 40%+ 削減（年約 50 万ドル）',
-    'Authoritative servers where the clock is the enemy.': '時計が敵になる権威サーバー。',
+    'Realtime room-based battle royale game servers.': 'ルームベースのリアルタイム・バトルロイヤルゲームサーバー。',
     'Matchmaking, room lifecycle, reconnect and state resynchronisation.': 'マッチメイキング、ルームのライフサイクル、再接続と状態の再同期。',
     '20K+ msg/s MQTT ingestion · Orbital, an open-source game server framework': '毎秒 20K+ メッセージの MQTT 取り込み · オープンソースのゲームサーバーフレームワーク Orbital',
     'Fintech & payments': 'フィンテック & 決済',

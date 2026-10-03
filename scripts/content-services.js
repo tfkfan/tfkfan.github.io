@@ -73,11 +73,11 @@
     {
       n: '03',
       title: T('Realtime, games, multiplayers', 'Tiempo real, juegos, multijugador', 'Echtzeit, Games, Multiplayer', 'Temps réel, jeux, multijoueur', 'Tempo real, jogos, multijogador'),
-      one: T('Authoritative servers where the clock is the enemy.',
-        'Servidores autoritativos donde el reloj es el enemigo.',
-        'Autoritative Server, bei denen die Uhr der Gegner ist.',
-        'Serveurs autoritaires où l’horloge est l’ennemi.',
-        'Servidores autoritativos onde o relógio é o inimigo.'),
+      one: T('Realtime room-based battle royale game servers.',
+        'Servidores de juego battle royale en tiempo real basados en salas.',
+        'Echtzeit-Battle-Royale-Game-Server auf Raum-Basis.',
+        'Serveurs de jeu battle royale en temps réel basés sur des salles.',
+        'Servidores de jogo battle royale em tempo real baseados em salas.'),
       bullets: [
         T('Low latency highload async backend.',
           'Backend asíncrono de baja latencia y alta carga.',

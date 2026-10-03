@@ -98,7 +98,7 @@
     'Strangler-fig migration with dual writes, shadow traffic and feature flags.': '绞杀者模式迁移：双写、影子流量与功能开关。',
     'Runtime rightsizing and deletion of the old path — otherwise it never dies.': '运行时资源调优并删除旧路径 —— 否则它永远不会消失。',
     '20+ Go microservices · 40%+ cloud cost cut (≈ $500K/year)': '20+ 个 Go 微服务 · 云成本降低 40%+（约 50 万美元/年）',
-    'Authoritative servers where the clock is the enemy.': '以时间为敌的权威服务器。',
+    'Realtime room-based battle royale game servers.': '基于房间的实时大逃杀（battle royale）游戏服务器。',
     'Matchmaking, room lifecycle, reconnect and state resynchronisation.': '匹配、房间生命周期、断线重连与状态重同步。',
     '20K+ msg/s MQTT ingestion · Orbital, an open-source game server framework': '20K+ 条/秒 MQTT 接入 · Orbital，开源游戏服务器框架',
     'Fintech & payments': '金融科技与支付',
