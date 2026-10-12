@@ -1,0 +1,98 @@
+<!doctype html>
+<!-- Social preview card (1200×630). Regenerate after editing:
+       google-chrome --headless=new --disable-gpu --hide-scrollbars \
+         --window-size=1200,900 --screenshot=../.og-raw.png og-card.html
+       convert ../.og-raw.png -crop 1200x630+0+0 +repage ../assets/og-card.png
+     The window is deliberately taller than 630: headless Chrome's layout viewport
+     is the window height minus ~87px, and content below the viewport is not
+     painted — so render tall and crop the top 1200×630.
+     Mirrors the current landing style: yellow canvas, near-black rounded card,
+     Bungee throughout, yellow accent. -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #fffd00;                 /* --bg */
+    color: #fff;
+    font-family: 'Bungee', ui-monospace, monospace;
+    font-synthesis: none;
+    position: relative;
+  }
+  /* faint dark grid on the yellow canvas, faded towards the edges */
+  .grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(10,12,16,.07) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(10,12,16,.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at 18% 0%, #000 32%, transparent 80%);
+  }
+  /* Explicit box instead of `inset` so the card keeps its 1200×630 composition
+     no matter what viewport height the capture uses. */
+  .win {
+    position: absolute; left: 34px; top: 34px; width: 1132px; height: 562px;
+    border: 1px solid #1b1f26; border-radius: 20px;
+    background: linear-gradient(180deg, #0a0c10, #06070a);
+    display: flex; flex-direction: column; overflow: hidden;
+    box-shadow: 0 50px 140px -70px #000, inset 0 1px 0 rgba(255,255,255,.04);
+  }
+  /* 1px accent line across the top edge, faded at both ends */
+  .win::before {
+    content: ''; position: absolute; left: 14%; right: 14%; top: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,253,0,.55), transparent);
+  }
+  .bar {
+    display: flex; align-items: center; gap: 8px; padding: 12px 18px;
+    border-bottom: 1px solid #14181f; font-size: 14px; color: rgba(255,255,255,.46);
+  }
+  .body { flex: 1; padding: 30px 46px 26px; display: flex; flex-direction: column; }
+  .cmd { display: flex; align-items: baseline; gap: 8px; font-size: 15px; color: #fff; margin-bottom: 12px; }
+  .caret { display: inline-block; width: 8px; height: 15px; background: #fffd00; }
+  h1 {
+    font-size: 62px; font-weight: 400; letter-spacing: 0; line-height: 1.06;
+    color: #fff; text-shadow: 0 0 60px rgba(255,253,0,.18);
+  }
+  .role { font-size: 22px; color: rgba(255,255,255,.88); margin-top: 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 24px; }
+  .chip {
+    font-size: 13px; padding: 5px 11px; border: 1px solid #2b323c; border-radius: 999px;
+    color: rgba(255,255,255,.7); background: rgba(255,255,255,.02);
+  }
+  .foot {
+    display: flex; gap: 22px; margin-top: 16px; padding-top: 16px;
+    border-top: 1px solid #14181f; font-size: 14px; color: rgba(255,255,255,.46);
+  }
+  .foot em { color: #fffd00; font-style: normal; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="win">
+    <div class="bar">artem@portfolio — zsh</div>
+    <div class="body">
+      <div class="cmd"><span>whoami</span><span class="caret"></span></div>
+      <h1>Artem Baltser</h1>
+      <div class="role">Backend, platform engineer. AI engineer. AI artist.</div>
+      <div class="chips">
+        <span class="chip">Go</span>
+        <span class="chip">Java</span>
+        <span class="chip">Kafka · Flink</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">LLM &amp; RAG</span>
+        <span class="chip">Generative art</span>
+        <span class="chip">Realtime &amp; games</span>
+      </div>
+      <div class="foot">
+        <span><em>tfkfan.github.io</em></span>
+        <span>github.com/tfkfan</span>
+        <span>linkedin.com/in/tfkfan</span>
+        <span>abaltserdev@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
